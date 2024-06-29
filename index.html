@@ -149,7 +149,7 @@ Audio</h2>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
-<div class="line">  cfg = <a class="code" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a>(&amp;my_audio_callback, NULL, NULL);</div>
+<div class="line">  cfg = <a class="code" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a>(argc, argv, &amp;my_audio_callback, NULL, NULL);</div>
 <div class="line">  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line">    Pa_Sleep(1000);</div>
 <div class="line">  }</div>
@@ -176,7 +176,7 @@ MIDI</h2>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
-<div class="line">  cfg = <a class="code" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a>(&amp;my_audio_callback, NULL, NULL);</div>
+<div class="line">  cfg = <a class="code" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a>(argc, argv, &amp;my_audio_callback, NULL, NULL);</div>
 <div class="line">  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line">    <span class="comment">// Use porttime sleep function instead of portaudio</span></div>
 <div class="line">    Pt_Sleep(1000);</div>
