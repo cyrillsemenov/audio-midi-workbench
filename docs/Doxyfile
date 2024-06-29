@@ -4,7 +4,7 @@
 
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Workbench Library"
-PROJECT_NUMBER         = "b0.1"
+PROJECT_NUMBER         = "0.1b"
 PROJECT_BRIEF          = "The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi."
 PROJECT_LOGO           =
 PROJECT_ICON           =
@@ -256,14 +256,11 @@ GENERATE_LATEX         = NO
 GENERATE_HTML          = YES
 HTML_OUTPUT            = html
 HTML_FILE_EXTENSION    = .html
-HTML_HEADER            = docs/header.html
+HTML_HEADER            = 
 HTML_FOOTER            =
 HTML_STYLESHEET        =
 HTML_EXTRA_STYLESHEET  = docs/doxygen-awesome-css/doxygen-awesome.css \
-                         docs/doxygen-awesome-css/doxygen-awesome-sidebar-only.css \
-                         docs/doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css \
-                         docs/doxygen-awesome-css/doxygen-awesome-fragment-copy-button.js
-HTML_EXTRA_FILES       = docs/doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js
+                         docs/doxygen-awesome-css/doxygen-awesome-sidebar-only.css
 HTML_COLORSTYLE        = LIGHT # required with Doxygen >= 1.9.5 by doxygen-awesome-css
 HTML_COLORSTYLE_HUE    = 148
 HTML_COLORSTYLE_SAT    = 100
@@ -271,7 +268,7 @@ HTML_COLORSTYLE_GAMMA  = 80
 HTML_DYNAMIC_MENUS     = YES
 HTML_DYNAMIC_SECTIONS  = NO
 HTML_CODE_FOLDING      = YES
-HTML_COPY_CLIPBOARD    = NO
+HTML_COPY_CLIPBOARD    = YES
 HTML_PROJECT_COOKIE    =
 HTML_INDEX_NUM_ENTRIES = 100
 

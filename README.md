@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi. It includes functionality for initializing, configuring, and handling audio and MIDI input/output, along with utilities for logging and configuration management.
+The Workbench library provides a cookiecutter for audio and MIDI processing using PortAudio and PortMidi. It includes functionality for initializing, configuring, and handling audio and MIDI input/output, along with utilities for logging and configuration management.
 
 ## Prerequisites
 
@@ -29,8 +29,8 @@ The Workbench library uses a Makefile to manage the build process. Below are the
    Clone the repository containing the Workbench library source code:
 
    ```bash
-   git clone https://github.com/your-repo/workbench.git
-   cd workbench
+   git clone https://github.com/cyrillsemenov/audio-midi-workbench
+   cd audio-midi-workbench
    ```
 
 2. Build the Library and Examples
@@ -68,9 +68,6 @@ Here are some basic usage examples to help you get started with the Workbench Au
 ```c
 #include "workbench.h"
 
-// Disable midi
-#define MIDI_ENABLED 0
-
 Config *cfg;
 
 void my_audio_callback(const void *input_buffer, void *output_buffer, unsigned long block_size, void *user_data) {
@@ -94,9 +91,6 @@ int main(int argc, char **argv) {
 ```c
 #include "workbench.h"
 
-// Disable audio
-#define AUDIO_ENABLED 0
-
 Config *cfg;
 
 int my_midi_callback(const void *input_buffer, void *output_buffer, unsigned long block_size, void *user_data) {
@@ -119,12 +113,43 @@ int main(int argc, char **argv) {
 }
 ```
 
-### Configuration
+## Configuration
 
-The project includes a flexible configuration system using X-macros to manage various settings.
+Workbench parameters have default values, which can be overridden by values set in a config file or command line arguments.
 
-The `Config` structure holds all configuration parameters, and the following macros are used to define and manage these settings:
+Values have this priority:
 
-- `CONFIG`: Defines configuration fields and their default values.
-- `FLAGS`: Lists feature flags for enabling or disabling various functionalities.
-- `ENUMERATE` and `DEFINE`: Used to generate enumerations and bitwise values for feature flags.
+1. Default parameters
+2. Values from the config file override default values
+3. Values from command line arguments override values from the config file
+
+### Config File
+
+Create a text file (e.g., config.yml) that contains the configuration settings.
+
+Example config.yml:
+
+```yaml
+# Configuration for the application
+midi_input: my_midi_input_device
+midi_output: my_midi_output_device
+midi_buffer_size: 512
+audio_input: my_audio_input_device
+audio_output: my_audio_output_device
+sample_rate: 44100
+block_size: 1024
+in_channel_count: 1
+out_channel_count: 2
+```
+
+### Command Line Arguments
+
+When running the application, you can pass command line arguments to override the config file settings or to provide additional options.
+
+Example command line:
+
+```bash
+./my_application --config=config.txt --midi_input=my_midi_input_device --sample_rate=48000
+```
+
+This will use the config.txt file for initial settings but will override the midi_input and sample_rate settings from the command line arguments.
