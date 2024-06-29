@@ -1,11 +1,4 @@
-#include "workbench_audio.h"
-#include "portaudio.h"
-#include "workbench_config.h"
-#include "workbench_logger.h"
-#include "workbench_midi.h"
-#include <stdbool.h>
-#include <stdlib.h>
-#include <string.h>
+#include "workbench.h"
 
 #define TRY(x)                                                                 \
   err = (x);                                                                   \
@@ -74,7 +67,7 @@ void audio_init() {
   log_d("Audio init start");
   PaError err;
   TRY(Pa_Initialize());
-  cfg = get_config();
+  cfg = config_get();
 
   if (!cfg->audio_input) {
     __audio_in_id = Pa_GetDefaultInputDevice();

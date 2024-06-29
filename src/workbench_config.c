@@ -1,12 +1,4 @@
-#include "workbench_config.h"
-#include "workbench_audio.h"
-#include "workbench_logger.h"
-#include "workbench_midi.h"
-#include <ctype.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "workbench.h"
 
 #ifndef STRING_MAX
 #define STRING_MAX 256
@@ -20,17 +12,28 @@
            default : 0)
 #define IS_FLOAT_TYPE(x) _Generic((x), float : 1, double : 1, default : 0)
 
+/**
+ * \struct Argument_t
+ * \brief Structure to store command-line arguments.
+ *
+ * This structure holds a command-line argument and its corresponding value.
+ */
+typedef struct {
+  char *arg; /**< Argument name. */
+  char *val; /**< Argument value. */
+} Argument_t;
+
+static void read_config_from_file(const char *filename, Config *config);
+static void parse_val(Config *config, char *arg, char *val);
+static void argparse(int argc, char **argv, Argument_t *arguments,
+                     int *args_parsed, char **config_file);
+
 static Config __cfg = {0};
 
-Config *get_config() { return &__cfg; }
+Config *config_get() { return &__cfg; }
 uint8_t get_log_level() { return __cfg.log_level; }
 
-#define IMPLEMENT_SETTERS(type, field, default)                                \
-  __attribute__((weak)) void config_set_##field(type field) {                  \
-    __cfg.field = field;                                                       \
-  }
-CONFIG(IMPLEMENT_SETTERS)
-#undef IMPLEMENT_SETTERS
+CONFIG(WORKBENCH_CONFIG_IMPLEMENT_SETTERS)
 
 // void config_set_flags(uint32_t flags) { __cfg.flags |= flags; }
 // void config_clear_flags(uint32_t flags) { __cfg.flags ^= flags; }
@@ -39,15 +42,12 @@ Config *config_init(int argc, char **argv, AudioCallback audio_cb,
                     MidiCallback midi_cb, void *user_data) {
   log_d("Start config");
   // Initialize with default values
-#define DEFAULT(type, field, default) .field = default,
-  Config config = {CONFIG(DEFAULT)};
-#undef DEFAULT
-
-  char *config_file = NULL;
+  Config config = {CONFIG(WORKBENCH_CONFIG_SET_DEFAULTS)};
 
   // Read command line arguments
   Argument_t *cl_args = malloc(sizeof(Argument_t) * 128);
   int cl_args_num = 0;
+  char *config_file = NULL;
   argparse(argc, argv, cl_args, &cl_args_num, &config_file);
 
   // Apply values from config file
@@ -60,11 +60,10 @@ Config *config_init(int argc, char **argv, AudioCallback audio_cb,
   }
 
   // Copy config to actual struct
-#define INIT(type, field, default) __cfg.field = config.field;
-  CONFIG(INIT);
-#undef INIT
+  memcpy(&__cfg, &config, sizeof(Config));
 
-  print_config();
+  if (config.log_level > 2)
+    config_print();
 
   // Set pointers and callbacks
   __cfg.audio_callback = audio_cb;
@@ -109,38 +108,36 @@ size_t starts_with(const char *restrict buffer, const char *prefix) {
   return res;
 }
 
+/**
+ * \brief Parse a value from a string and set the corresponding field in the
+ * configuration.
+ *
+ * \param config Pointer to the Config structure.
+ * \param arg The argument name.
+ * \param val The argument value as a string.
+ */
 void parse_val(Config *config, char *arg, char *val) {
   // Allocate enough space
   void *result = malloc(sizeof(long double));
 
-#define PARSE(type, field, default)                                            \
-  if (strcmp(arg, #field) == 0) {                                              \
-    if (IS_TEXT_TYPE((type) default)) {                                        \
-      *((char **)result) = strdup(val);                                        \
-    } else if (IS_INT_TYPE((type) default)) {                                  \
-      *((int32_t *)result) = strtoll(val, (char **)NULL, 10);                  \
-    } else if (IS_UINT_TYPE((type) default)) {                                 \
-      *((uint32_t *)result) = strtoull(val, (char **)NULL, 10);                \
-    } else if (IS_FLOAT_TYPE((type) default)) {                                \
-      *((double *)result) = strtod(val, (char **)NULL);                        \
-    } else {                                                                   \
-      log_w("Unknown type '%s'. Can not take '%s' from config.", #type, arg);  \
-      free(result);                                                            \
-      return;                                                                  \
-    }                                                                          \
-    config->field = *((type *)result);                                         \
-  } else
-  CONFIG(PARSE) { log_w("Unknown argument %s", arg); }
-#undef PARSE
+  CONFIG(WORKBENCH_CONFIG_PARSE_STRING) { log_w("Unknown argument %s", arg); }
+
   free(result);
 }
 
-int read_config_from_file(const char *restrict filename, Config *config) {
+/*!
+ * \brief Reads configuration settings from a file.
+ *
+ * \param filename The name of the file to read the configuration from.
+ * \param config A pointer to the configuration structure to populate.
+ */
+void read_config_from_file(const char *restrict filename, Config *config) {
   if (!filename)
-    return 0;
+    return;
+
   FILE *cfg = fopen(filename, "r");
   if (!cfg)
-    return 0;
+    return;
 
   char buffer[STRING_MAX];
 
@@ -163,9 +160,18 @@ int read_config_from_file(const char *restrict filename, Config *config) {
     parse_val(config, arg, val);
   }
   fclose(cfg);
-  return 1;
+  return;
 }
 
+/**
+ * \brief Parse command-line arguments and store them in the arguments array.
+ *
+ * \param argc The number of command-line arguments.
+ * \param argv The array of command-line argument strings.
+ * \param arguments The array to store parsed arguments.
+ * \param args_parsed Pointer to the number of parsed arguments.
+ * \param config_file Pointer to the configuration file path.
+ */
 void argparse(int argc, char **argv, Argument_t *arguments, int *args_parsed,
               char **config_file) {
   __cfg.log_level = 3;
@@ -203,12 +209,7 @@ void argparse(int argc, char **argv, Argument_t *arguments, int *args_parsed,
         log_d("Read config from file: \"%s\"", val);
         *config_file = strdup(val);
       }
-#define PARSE_ARGUMENTS(type, field, default)                                  \
-  else if (strcmp(arg, #field) == 0) {                                         \
-    arguments[(*args_parsed)++] = (Argument_t){.arg = arg, .val = val};        \
-  }
-      CONFIG(PARSE_ARGUMENTS)
-#undef PARSE_ARGUMENTS
+      CONFIG(WORKBENCH_CONFIG_PARSE_ARGUMENTS)
       else {
         log_w("Unknown arg: \"%s=%s\"", arg, val);
       }
@@ -216,7 +217,7 @@ void argparse(int argc, char **argv, Argument_t *arguments, int *args_parsed,
   };
 }
 
-void print_config() {
+void config_print() {
   printf("Config:\n"
          "  MIDI:\n"
          "    midi_input: \t%s\n"

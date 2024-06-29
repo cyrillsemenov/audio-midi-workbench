@@ -5,7 +5,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Workbench Library"
 PROJECT_NUMBER         = "0.1b"
-PROJECT_BRIEF          = "The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi."
+PROJECT_BRIEF          = 
 PROJECT_LOGO           =
 PROJECT_ICON           =
 OUTPUT_DIRECTORY       = docs

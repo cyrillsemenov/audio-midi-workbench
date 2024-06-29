@@ -1,12 +1,4 @@
-#include "workbench_midi.h"
-#include "portaudio.h"
-#include "portmidi.h"
-#include "workbench_config.h"
-#include "workbench_logger.h"
-#include <stdbool.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/_types/_int32_t.h>
+#include "workbench.h"
 
 #define MIDI_TRY(x)                                                            \
   err = (x);                                                                   \
@@ -49,7 +41,7 @@ static bool midi_device_find(char *pattern, bool input) {
 void midi_init() {
   log_d("Midi init start");
   PmError err;
-  cfg = get_config();
+  cfg = config_get();
   MIDI_TRY(Pm_Initialize());
   midi_in_buffer = malloc(sizeof(PmEvent) * cfg->midi_buffer_size);
   midi_out_buffer = malloc(sizeof(PmEvent) * cfg->midi_buffer_size);
@@ -106,7 +98,7 @@ void midi_deinit() {
 
 void __midi_callback(int32_t timestamp, void *userData) {
   (void)timestamp;
-  Config *cfg = get_config();
+  Config *cfg = config_get();
   if (!cfg->midi_callback)
     return;
   int in_queue_length = Pm_Read(midi_in, midi_in_buffer, cfg->midi_buffer_size);
