@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -86,34 +85,21 @@ $(document).ready(function(){initNavTree('workbench__audio_8h.html',''); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">workbench_audio.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Audio system initialization and deinitialization for Workbench applications.  
+<p>Audio system configuration for Workbench applications.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;portaudio.h&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for workbench_audio.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="workbench__audio_8h__incl.png" border="0" usemap="#ainclude_2workbench__audio_8h" alt=""/></div>
-<map name="ainclude_2workbench__audio_8h" id="ainclude_2workbench__audio_8h">
-<area shape="rect" title="Audio system initialization and deinitialization for Workbench applications." alt="" coords="5,5,204,32"/>
-<area shape="rect" title=" " alt="" coords="57,80,153,107"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="workbench__audio_8h__dep__incl.png" border="0" usemap="#ainclude_2workbench__audio_8hdep" alt=""/></div>
 <map name="ainclude_2workbench__audio_8hdep" id="ainclude_2workbench__audio_8hdep">
-<area shape="rect" title="Audio system initialization and deinitialization for Workbench applications." alt="" coords="5,5,204,32"/>
-<area shape="rect" href="workbench_8h_source.html" title=" " alt="" coords="27,155,183,181"/>
-<area shape="rect" href="workbench__config_8h.html" title="Configuration settings and utility functions for Workbench audio and MIDI applications." alt="" coords="73,80,275,107"/>
+<area shape="rect" title="Audio system configuration for Workbench applications." alt="" coords="5,5,204,32"/>
+<area shape="rect" href="workbench_8h.html" title=" " alt="" coords="27,80,183,107"/>
 </map>
 </div>
 </div>
@@ -121,7 +107,9 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a4a1dc76804dee55440195a35b866d570"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#a4a1dc76804dee55440195a35b866d570">SAMPLE_FORMAT</a>&#160;&#160;&#160;Float32</td></tr>
+<tr class="memitem:a4a1dc76804dee55440195a35b866d570"><td class="memItemLeft" align="right" valign="top"><a id="a4a1dc76804dee55440195a35b866d570"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#a4a1dc76804dee55440195a35b866d570">SAMPLE_FORMAT</a>&#160;&#160;&#160;Float32</td></tr>
+<tr class="memdesc:a4a1dc76804dee55440195a35b866d570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the sample format to be used. Change this to change the type of the audio sample. This macro should be set to one of the following values: <code>Float32</code>, <code>Int32</code>, <code>Int24</code>, <code>Int16</code>, or <code>Int8</code>. <br /></td></tr>
 <tr class="separator:a4a1dc76804dee55440195a35b866d570"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc597c76b4f04a2da506a240d51d89a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#afc597c76b4f04a2da506a240d51d89a0">SAMPLE</a>&#160;&#160;&#160;_SAMPLE_TYPE(<a class="el" href="workbench__audio_8h.html#a4a1dc76804dee55440195a35b866d570">SAMPLE_FORMAT</a>)</td></tr>
 <tr class="memdesc:afc597c76b4f04a2da506a240d51d89a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the type for audio samples based on <code>SAMPLE_FORMAT</code>.  <a href="workbench__audio_8h.html#afc597c76b4f04a2da506a240d51d89a0">More...</a><br /></td></tr>
@@ -130,46 +118,11 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#a862fffa20ad836eabfcc90ee88523014">PA_SAMPLE_FORMAT</a>&#160;&#160;&#160;_PA_SAMPLE_FORMAT(<a class="el" href="workbench__audio_8h.html#a4a1dc76804dee55440195a35b866d570">SAMPLE_FORMAT</a>)</td></tr>
 <tr class="memdesc:a862fffa20ad836eabfcc90ee88523014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sample format used by PortAudio. <br /></td></tr>
 <tr class="separator:a862fffa20ad836eabfcc90ee88523014"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a51f199b1cf24bad62edbe399e4e5aa7a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="workbench__audio_8h.html#afc597c76b4f04a2da506a240d51d89a0">SAMPLE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a></td></tr>
-<tr class="memdesc:a51f199b1cf24bad62edbe399e4e5aa7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines <code>AudioSample_t</code> as the type for audio samples.  <a href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">More...</a><br /></td></tr>
-<tr class="separator:a51f199b1cf24bad62edbe399e4e5aa7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a330300f923f87d69788544dca9bf95b5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">AudioCallback</a>) (const void *, void *, unsigned long, void *)</td></tr>
-<tr class="memdesc:a330300f923f87d69788544dca9bf95b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type definition for audio callback functions.  <a href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">More...</a><br /></td></tr>
-<tr class="separator:a330300f923f87d69788544dca9bf95b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a1057a490ba85ab32c800c0e3c9e85c78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#a1057a490ba85ab32c800c0e3c9e85c78">audio_init</a> ()</td></tr>
-<tr class="memdesc:a1057a490ba85ab32c800c0e3c9e85c78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the audio system.  <a href="workbench__audio_8h.html#a1057a490ba85ab32c800c0e3c9e85c78">More...</a><br /></td></tr>
-<tr class="separator:a1057a490ba85ab32c800c0e3c9e85c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ab964d5f1f968335d931910c8f01837"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__audio_8h.html#a1ab964d5f1f968335d931910c8f01837">audio_deinit</a> ()</td></tr>
-<tr class="memdesc:a1ab964d5f1f968335d931910c8f01837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the audio system.  <a href="workbench__audio_8h.html#a1ab964d5f1f968335d931910c8f01837">More...</a><br /></td></tr>
-<tr class="separator:a1ab964d5f1f968335d931910c8f01837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Audio system initialization and deinitialization for Workbench applications. </p>
-<p>This header file defines functions for initializing and deinitializing the audio system using the PortAudio library. It includes the type definition for audio callback functions that are used to process audio data.</p>
-<p>The <code>audio_init</code> function sets up and starts the audio stream based on configuration settings, while the <code>audio_deinit</code> function stops and closes the audio stream, and terminates the PortAudio library.</p>
-<p>Example usage: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="workbench__audio_8h.html">workbench_audio.h</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> my_audio_callback(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer,</div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> block_size, <span class="keywordtype">void</span> *user_data) {</div>
-<div class="line">    <span class="comment">// Process audio data here</span></div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <a class="code" href="workbench__audio_8h.html#a1057a490ba85ab32c800c0e3c9e85c78">audio_init</a>();</div>
-<div class="line">    <span class="comment">// Application code here</span></div>
-<div class="line">    <a class="code" href="workbench__audio_8h.html#a1ab964d5f1f968335d931910c8f01837">audio_deinit</a>();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="ttc" id="aworkbench__audio_8h_html"><div class="ttname"><a href="workbench__audio_8h.html">workbench_audio.h</a></div><div class="ttdoc">Audio system initialization and deinitialization for Workbench applications.</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_a1057a490ba85ab32c800c0e3c9e85c78"><div class="ttname"><a href="workbench__audio_8h.html#a1057a490ba85ab32c800c0e3c9e85c78">audio_init</a></div><div class="ttdeci">void audio_init()</div><div class="ttdoc">Initializes the audio system.</div><div class="ttdef"><b>Definition:</b> workbench_audio.c:73</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_a1ab964d5f1f968335d931910c8f01837"><div class="ttname"><a href="workbench__audio_8h.html#a1ab964d5f1f968335d931910c8f01837">audio_deinit</a></div><div class="ttdeci">void audio_deinit()</div><div class="ttdoc">Deinitializes the audio system.</div><div class="ttdef"><b>Definition:</b> workbench_audio.c:116</div></div>
-</div><!-- fragment --> </div><h2 class="groupheader">Macro Definition Documentation</h2>
+<div class="textblock"><p>Audio system configuration for Workbench applications. </p>
+<p>This header file defines macros for configuring the audio system used in Workbench applications with the PortAudio library. It includes type definitions for audio samples based on the specified sample format. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="afc597c76b4f04a2da506a240d51d89a0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afc597c76b4f04a2da506a240d51d89a0">&#9670;&nbsp;</a></span>SAMPLE</h2>
 
@@ -183,113 +136,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Defines the type for audio samples based on <code>SAMPLE_FORMAT</code>. </p>
-<p>This macro expands to the type corresponding to <code>SAMPLE_FORMAT</code> by using <code>SAMPLE_TYPE</code>. For example, if <code>SAMPLE_FORMAT</code> is <code>paFloat32</code>, this macro will expand to <code>float</code>. </p>
-
-</div>
-</div>
-<a id="a4a1dc76804dee55440195a35b866d570"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a1dc76804dee55440195a35b866d570">&#9670;&nbsp;</a></span>SAMPLE_FORMAT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SAMPLE_FORMAT&#160;&#160;&#160;Float32</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Defines the sample format to be used. Change this to change the type of the audio sample. This macro should be set to one of the following values: <code>Float32</code>, <code>Int32</code>, <code>Int24</code>, <code>Int16</code>, or <code>Int8</code>. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a330300f923f87d69788544dca9bf95b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a330300f923f87d69788544dca9bf95b5">&#9670;&nbsp;</a></span>AudioCallback</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* AudioCallback) (const void *, void *, unsigned long, void *)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Type definition for audio callback functions. </p>
-<p>An <code>AudioCallback</code> function is called during audio processing to handle input and output audio buffers. It takes the following parameters:</p><ul>
-<li><code>input_buffer</code>: A pointer to the input audio buffer.</li>
-<li><code>output_buffer</code>: A pointer to the output audio buffer.</li>
-<li><code>block_size</code>: The number of frames in the buffer.</li>
-<li><code>user_data</code>: A pointer to user-defined data passed to the callback function.</li>
-</ul>
-<p>Example usage: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> my_audio_callback(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer,</div>
-<div class="line"><span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> block_size, <span class="keywordtype">void</span> *user_data) {</div>
-<div class="line">  <span class="keyword">const</span> <span class="keywordtype">float</span> *in = (<span class="keyword">const</span> <span class="keywordtype">float</span> *)input_buffer;</div>
-<div class="line">  <span class="keywordtype">float</span> *out = (<span class="keywordtype">float</span> *)output_buffer;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; block_size; ++i) {</div>
-<div class="line">    *out++ = in[i];</div>
-<div class="line">  }</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a51f199b1cf24bad62edbe399e4e5aa7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51f199b1cf24bad62edbe399e4e5aa7a">&#9670;&nbsp;</a></span>AudioSample_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Defines <code>AudioSample_t</code> as the type for audio samples. </p>
-<p>This typedef defines <code>AudioSample_t</code> to be the type corresponding to <code>SAMPLE_FORMAT</code>. For example, if <code>SAMPLE_FORMAT</code> is <code>paFloat32</code>, <code>AudioSample_t</code> will be defined as <code>float</code>. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a1ab964d5f1f968335d931910c8f01837"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ab964d5f1f968335d931910c8f01837">&#9670;&nbsp;</a></span>audio_deinit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void audio_deinit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Deinitializes the audio system. </p>
-<p>This function stops and closes the audio stream, and then terminates the PortAudio library. It logs any errors that occur during the deinitialization process. </p>
-
-</div>
-</div>
-<a id="a1057a490ba85ab32c800c0e3c9e85c78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1057a490ba85ab32c800c0e3c9e85c78">&#9670;&nbsp;</a></span>audio_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void audio_init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes the audio system. </p>
-<p>This function initializes the PortAudio library, sets up the audio input and output devices based on the configuration settings, and starts the audio stream. It also configures the audio stream parameters such as sample rate, block size, and channel counts.</p>
-<p>If an error occurs during initialization, it logs the error message and deinitializes the audio system. </p>
+<p>This macro expands to the type corresponding to <code>SAMPLE_FORMAT</code>. For example, if <code>SAMPLE_FORMAT</code> is <code>Float32</code>, this macro will expand to <code>float</code>. </p>
 
 </div>
 </div>

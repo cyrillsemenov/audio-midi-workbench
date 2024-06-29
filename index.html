@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -138,30 +137,31 @@ Usage</h1>
 <p>Here are some basic usage examples to help you get started with the Workbench Audio and MIDI project.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Audio</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;workbench.h&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="workbench_8h.html">workbench.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="structConfig.html">Config</a> *cfg;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> my_audio_callback(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> block_size, <span class="keywordtype">void</span> *user_data) {</div>
-<div class="line">    <span class="keyword">const</span> <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *in = (<span class="keyword">const</span> <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)input_buffer;</div>
-<div class="line">    <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *out = (<a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)output_buffer;</div>
+<div class="line">    <span class="keyword">const</span> <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *in = (<span class="keyword">const</span> <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)input_buffer;</div>
+<div class="line">    <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *out = (<a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)output_buffer;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Process audio data here</span></div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
-<div class="line">  cfg = <a class="code" href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">config_init</a>(&amp;my_audio_callback, NULL, NULL);</div>
+<div class="line">  cfg = <a class="code" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a>(&amp;my_audio_callback, NULL, NULL);</div>
 <div class="line">  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line">    Pa_Sleep(1000);</div>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-<div class="ttc" id="astructConfig_html"><div class="ttname"><a href="structConfig.html">Config</a></div><div class="ttdoc">Defines the structure for configuration settings.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:183</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_a51f199b1cf24bad62edbe399e4e5aa7a"><div class="ttname"><a href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a></div><div class="ttdeci">SAMPLE AudioSample_t</div><div class="ttdoc">Defines AudioSample_t as the type for audio samples.</div><div class="ttdef"><b>Definition:</b> workbench_audio.h:68</div></div>
-<div class="ttc" id="aworkbench__config_8h_html_a092dcf94b7f8401790f6ede857121f2c"><div class="ttname"><a href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">config_init</a></div><div class="ttdeci">Config * config_init(int argc, char **argv, AudioCallback audio_cb, MidiCallback midi_cb, void *user_data)</div><div class="ttdoc">Initializes the configuration with the specified audio and MIDI callbacks.</div><div class="ttdef"><b>Definition:</b> workbench_config.c:38</div></div>
+<div class="ttc" id="agroup__audio_html_ga51f199b1cf24bad62edbe399e4e5aa7a"><div class="ttname"><a href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a></div><div class="ttdeci">SAMPLE AudioSample_t</div><div class="ttdoc">Defines AudioSample_t as the type for audio samples.</div><div class="ttdef"><b>Definition:</b> workbench.h:41</div></div>
+<div class="ttc" id="agroup__config_html_ga092dcf94b7f8401790f6ede857121f2c"><div class="ttname"><a href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a></div><div class="ttdeci">Config * config_init(int argc, char **argv, AudioCallback audio_cb, MidiCallback midi_cb, void *user_data)</div><div class="ttdoc">Initializes the configuration with the specified audio and MIDI callbacks.</div><div class="ttdef"><b>Definition:</b> workbench_config.c:41</div></div>
+<div class="ttc" id="astructConfig_html"><div class="ttname"><a href="structConfig.html">Config</a></div><div class="ttdoc">Defines the structure for configuration settings.</div><div class="ttdef"><b>Definition:</b> workbench.h:287</div></div>
+<div class="ttc" id="aworkbench_8h_html"><div class="ttname"><a href="workbench_8h.html">workbench.h</a></div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
 MIDI</h2>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;workbench.h&quot;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="workbench_8h.html">workbench.h</a>&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><a class="code" href="structConfig.html">Config</a> *cfg;</div>
 <div class="line"> </div>
@@ -176,7 +176,7 @@ MIDI</h2>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
-<div class="line">  cfg = <a class="code" href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">config_init</a>(&amp;my_audio_callback, NULL, NULL);</div>
+<div class="line">  cfg = <a class="code" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a>(&amp;my_audio_callback, NULL, NULL);</div>
 <div class="line">  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line">    <span class="comment">// Use porttime sleep function instead of portaudio</span></div>
 <div class="line">    Pt_Sleep(1000);</div>

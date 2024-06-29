@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -86,252 +85,62 @@ $(document).ready(function(){initNavTree('workbench__config_8h.html',''); initRe
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Data Structures</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">workbench_config.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Configuration settings and utility functions for Workbench audio and MIDI applications.  
+<p>Configuration settings and macros for Workbench audio and MIDI applications.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;portaudio.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="workbench__audio_8h_source.html">workbench_audio.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="workbench__midi_8h_source.html">workbench_midi.h</a>&quot;</code><br />
-<code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for workbench_config.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="workbench__config_8h__incl.png" border="0" usemap="#ainclude_2workbench__config_8h" alt=""/></div>
-<map name="ainclude_2workbench__config_8h" id="ainclude_2workbench__config_8h">
-<area shape="rect" title="Configuration settings and utility functions for Workbench audio and MIDI applications." alt="" coords="208,5,411,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,101,181"/>
-<area shape="rect" href="workbench__audio_8h.html" title="Audio system initialization and deinitialization for Workbench applications." alt="" coords="66,80,214,107"/>
-<area shape="rect" href="workbench__midi_8h.html" title="MIDI system initialization, deinitialization, and processing for Workbench applications." alt="" coords="239,80,380,107"/>
-<area shape="rect" title=" " alt="" coords="381,155,451,181"/>
-<area shape="rect" title=" " alt="" coords="455,80,537,107"/>
-<area shape="rect" title=" " alt="" coords="150,155,239,181"/>
-<area shape="rect" title=" " alt="" coords="264,155,355,181"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="workbench__config_8h__dep__incl.png" border="0" usemap="#ainclude_2workbench__config_8hdep" alt=""/></div>
 <map name="ainclude_2workbench__config_8hdep" id="ainclude_2workbench__config_8hdep">
-<area shape="rect" title="Configuration settings and utility functions for Workbench audio and MIDI applications." alt="" coords="5,5,208,32"/>
-<area shape="rect" href="workbench_8h_source.html" title=" " alt="" coords="29,80,185,107"/>
+<area shape="rect" title="Configuration settings and macros for Workbench audio and MIDI applications." alt="" coords="5,5,208,32"/>
+<area shape="rect" href="workbench_8h.html" title=" " alt="" coords="29,80,185,107"/>
 </map>
 </div>
 </div>
 <p><a href="workbench__config_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Structures</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structConfig.html">Config</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the structure for configuration settings.  <a href="structConfig.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structArgument__t.html">Argument_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store command-line arguments.  <a href="structArgument__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:afbb888dc9b7a5266a291ded9b304a051"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#afbb888dc9b7a5266a291ded9b304a051">FLAGS</a>(FLAG)</td></tr>
-<tr class="memdesc:afbb888dc9b7a5266a291ded9b304a051"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a list of feature flags and their bitwise representations.  <a href="workbench__config_8h.html#afbb888dc9b7a5266a291ded9b304a051">More...</a><br /></td></tr>
-<tr class="separator:afbb888dc9b7a5266a291ded9b304a051"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd4a54d71549af6633ae069ac7161e16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#afd4a54d71549af6633ae069ac7161e16">ENUMERATE</a>(FLAG)&#160;&#160;&#160;FLAG##_BIT,</td></tr>
-<tr class="memdesc:afd4a54d71549af6633ae069ac7161e16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates flag bits.  <a href="workbench__config_8h.html#afd4a54d71549af6633ae069ac7161e16">More...</a><br /></td></tr>
-<tr class="separator:afd4a54d71549af6633ae069ac7161e16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46929313f236a3c9e8472fd56d95b6e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a46929313f236a3c9e8472fd56d95b6e9">DEFINE</a>(FLAG)&#160;&#160;&#160;FLAG = (1 &lt;&lt; FLAG##_BIT),</td></tr>
-<tr class="memdesc:a46929313f236a3c9e8472fd56d95b6e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines actual values for feature flags.  <a href="workbench__config_8h.html#a46929313f236a3c9e8472fd56d95b6e9">More...</a><br /></td></tr>
-<tr class="separator:a46929313f236a3c9e8472fd56d95b6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16d5c79bfe022d49a9231400bd77b25e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a16d5c79bfe022d49a9231400bd77b25e">CONFIG</a>(FIELD)</td></tr>
-<tr class="memdesc:a16d5c79bfe022d49a9231400bd77b25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines configuration fields and their default values using the X-macro technique.  <a href="workbench__config_8h.html#a16d5c79bfe022d49a9231400bd77b25e">More...</a><br /></td></tr>
-<tr class="separator:a16d5c79bfe022d49a9231400bd77b25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e24b6ea1a37ff08f1a07bd586fe527e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a3e24b6ea1a37ff08f1a07bd586fe527e">DEFINE_STRUCT</a>(type,  field,  default)&#160;&#160;&#160;type field;</td></tr>
-<tr class="memdesc:a3e24b6ea1a37ff08f1a07bd586fe527e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define a field in the configuration structure.  <a href="workbench__config_8h.html#a3e24b6ea1a37ff08f1a07bd586fe527e">More...</a><br /></td></tr>
-<tr class="separator:a3e24b6ea1a37ff08f1a07bd586fe527e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b8f871020948293f39603982bb135d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a26b8f871020948293f39603982bb135d">DEFINE_SETTERS</a>(type,  field,  default)&#160;&#160;&#160;  void config_set_##field(type field);</td></tr>
-<tr class="memdesc:a26b8f871020948293f39603982bb135d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define setter function declarations for configuration fields.  <a href="workbench__config_8h.html#a26b8f871020948293f39603982bb135d">More...</a><br /></td></tr>
-<tr class="separator:a26b8f871020948293f39603982bb135d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Config</div></td></tr>
-<tr class="memitem:aebead925e76eda38d70e5bb9c2e31577"><td class="memItemLeft" align="right" valign="top"><a id="aebead925e76eda38d70e5bb9c2e31577"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#aebead925e76eda38d70e5bb9c2e31577">MIDI_ENABLED</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:aebead925e76eda38d70e5bb9c2e31577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables MIDI functionality. <br /></td></tr>
-<tr class="separator:aebead925e76eda38d70e5bb9c2e31577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84aa0eedfd065bb08e646f943cd29441"><td class="memItemLeft" align="right" valign="top"><a id="a84aa0eedfd065bb08e646f943cd29441"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a84aa0eedfd065bb08e646f943cd29441">MIDI_IN_ENABLED</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a84aa0eedfd065bb08e646f943cd29441"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables MIDI input. <br /></td></tr>
-<tr class="separator:a84aa0eedfd065bb08e646f943cd29441"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac859e1c0d3dd5b963f90a5d407f501da"><td class="memItemLeft" align="right" valign="top"><a id="ac859e1c0d3dd5b963f90a5d407f501da"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#ac859e1c0d3dd5b963f90a5d407f501da">MIDI_OUT_ENABLED</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:ac859e1c0d3dd5b963f90a5d407f501da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables MIDI output. <br /></td></tr>
-<tr class="separator:ac859e1c0d3dd5b963f90a5d407f501da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a891e49a7107ff4b358e99ad9cdf51503"><td class="memItemLeft" align="right" valign="top"><a id="a891e49a7107ff4b358e99ad9cdf51503"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a891e49a7107ff4b358e99ad9cdf51503">AUDIO_ENABLED</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a891e49a7107ff4b358e99ad9cdf51503"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables audio functionality. <br /></td></tr>
-<tr class="separator:a891e49a7107ff4b358e99ad9cdf51503"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69a830df7beb25ee34cfc45fcec2d2f9"><td class="memItemLeft" align="right" valign="top"><a id="a69a830df7beb25ee34cfc45fcec2d2f9"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a69a830df7beb25ee34cfc45fcec2d2f9">AUDIO_IN_ENABLED</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a69a830df7beb25ee34cfc45fcec2d2f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables audio input. <br /></td></tr>
-<tr class="separator:a69a830df7beb25ee34cfc45fcec2d2f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5078d49462e2b83266d3c71f1f64ed5b"><td class="memItemLeft" align="right" valign="top"><a id="a5078d49462e2b83266d3c71f1f64ed5b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a5078d49462e2b83266d3c71f1f64ed5b">AUDIO_OUT_ENABLED</a>&#160;&#160;&#160;1</td></tr>
-<tr class="memdesc:a5078d49462e2b83266d3c71f1f64ed5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables audio output. <br /></td></tr>
-<tr class="separator:a5078d49462e2b83266d3c71f1f64ed5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8dee1276b3ac404fe98eca636dd519fb"><td class="memItemLeft" align="right" valign="top"><a id="a8dee1276b3ac404fe98eca636dd519fb"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a8dee1276b3ac404fe98eca636dd519fb">DEFAULT_SAMPLE_FORMAT</a>&#160;&#160;&#160;  paFloat32</td></tr>
-<tr class="memdesc:a8dee1276b3ac404fe98eca636dd519fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the default audio sample format. <br /></td></tr>
-<tr class="separator:a8dee1276b3ac404fe98eca636dd519fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15b16a6ea7016cfee8514844b0b22915"><td class="memItemLeft" align="right" valign="top"><a id="a15b16a6ea7016cfee8514844b0b22915"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a15b16a6ea7016cfee8514844b0b22915">DEFAULT_IN_CHANNELS_COUNT</a>&#160;&#160;&#160;  1</td></tr>
-<tr class="memdesc:a15b16a6ea7016cfee8514844b0b22915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the default number of audio input channels. <br /></td></tr>
-<tr class="separator:a15b16a6ea7016cfee8514844b0b22915"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a501db95d247f1f2361dd208a1c141d41"><td class="memItemLeft" align="right" valign="top"><a id="a501db95d247f1f2361dd208a1c141d41"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a501db95d247f1f2361dd208a1c141d41">DEFAULT_OUT_CHANNELS_COUNT</a>&#160;&#160;&#160;  2</td></tr>
-<tr class="memdesc:a501db95d247f1f2361dd208a1c141d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the default number of audio output channels. <br /></td></tr>
-<tr class="separator:a501db95d247f1f2361dd208a1c141d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a49003697fc6edfb6ba50009545fe3f40"><td class="memItemLeft" align="right" valign="top"><a id="a49003697fc6edfb6ba50009545fe3f40"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a49003697fc6edfb6ba50009545fe3f40">flag_bits</a> { <b>FLAGS</b> =(ENUMERATE)
- }</td></tr>
-<tr class="memdesc:a49003697fc6edfb6ba50009545fe3f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of flag bits for feature flags. <br /></td></tr>
-<tr class="separator:a49003697fc6edfb6ba50009545fe3f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6b306ef981f5e21bb41ea2c2dbe8cd9"><td class="memItemLeft" align="right" valign="top"><a id="ab6b306ef981f5e21bb41ea2c2dbe8cd9"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#ab6b306ef981f5e21bb41ea2c2dbe8cd9">flags</a> { <b>FLAGS</b> =(ENUMERATE)
- }</td></tr>
-<tr class="memdesc:ab6b306ef981f5e21bb41ea2c2dbe8cd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of feature flags. <br /></td></tr>
-<tr class="separator:ab6b306ef981f5e21bb41ea2c2dbe8cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a092dcf94b7f8401790f6ede857121f2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structConfig.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">config_init</a> (int argc, char **argv, <a class="el" href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">AudioCallback</a> audio_cb, <a class="el" href="workbench__midi_8h.html#ac3a6502ef7b764a0c4ac32264816910d">MidiCallback</a> midi_cb, void *user_data)</td></tr>
-<tr class="memdesc:a092dcf94b7f8401790f6ede857121f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the configuration with the specified audio and MIDI callbacks.  <a href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">More...</a><br /></td></tr>
-<tr class="separator:a092dcf94b7f8401790f6ede857121f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63bf52aa7f74fa54eef5dd128a67b7d5"><td class="memItemLeft" align="right" valign="top"><a id="a63bf52aa7f74fa54eef5dd128a67b7d5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>config_deinit</b> ()</td></tr>
-<tr class="separator:a63bf52aa7f74fa54eef5dd128a67b7d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b69eea0d2efcc36a4586d33986cd808"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structConfig.html">Config</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a5b69eea0d2efcc36a4586d33986cd808">get_config</a> ()</td></tr>
-<tr class="memdesc:a5b69eea0d2efcc36a4586d33986cd808"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the current configuration.  <a href="workbench__config_8h.html#a5b69eea0d2efcc36a4586d33986cd808">More...</a><br /></td></tr>
-<tr class="separator:a5b69eea0d2efcc36a4586d33986cd808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92db974a723bb3fc03d7c7d9d5c610f1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a> ()</td></tr>
-<tr class="memdesc:a92db974a723bb3fc03d7c7d9d5c610f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the log level.  <a href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">More...</a><br /></td></tr>
-<tr class="separator:a92db974a723bb3fc03d7c7d9d5c610f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7c8d9e5c9b0a3e2904557cbd5d20c32"><td class="memItemLeft" align="right" valign="top"><a id="ac7c8d9e5c9b0a3e2904557cbd5d20c32"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#ac7c8d9e5c9b0a3e2904557cbd5d20c32">print_config</a> ()</td></tr>
-<tr class="memdesc:ac7c8d9e5c9b0a3e2904557cbd5d20c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the current configuration settings to the standard output. <br /></td></tr>
-<tr class="separator:ac7c8d9e5c9b0a3e2904557cbd5d20c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3000aa679873ca624e13dd2787c23717"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a3000aa679873ca624e13dd2787c23717">read_config_from_file</a> (const char *filename, <a class="el" href="structConfig.html">Config</a> *config)</td></tr>
-<tr class="memdesc:a3000aa679873ca624e13dd2787c23717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads configuration settings from a file.  <a href="workbench__config_8h.html#a3000aa679873ca624e13dd2787c23717">More...</a><br /></td></tr>
-<tr class="separator:a3000aa679873ca624e13dd2787c23717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab355d010cdfc1d9034810071f2113aa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#ab355d010cdfc1d9034810071f2113aa1">parse_val</a> (<a class="el" href="structConfig.html">Config</a> *config, char *arg, char *val)</td></tr>
-<tr class="memdesc:ab355d010cdfc1d9034810071f2113aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse a value from a string and set the corresponding field in the configuration.  <a href="workbench__config_8h.html#ab355d010cdfc1d9034810071f2113aa1">More...</a><br /></td></tr>
-<tr class="separator:ab355d010cdfc1d9034810071f2113aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad01032cbe09cf2f94312db82496ec236"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#ad01032cbe09cf2f94312db82496ec236">argparse</a> (int argc, char **argv, <a class="el" href="structArgument__t.html">Argument_t</a> *arguments, int *args_parsed, char **config_file)</td></tr>
-<tr class="memdesc:ad01032cbe09cf2f94312db82496ec236"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse command-line arguments and store them in the arguments array.  <a href="workbench__config_8h.html#ad01032cbe09cf2f94312db82496ec236">More...</a><br /></td></tr>
-<tr class="separator:ad01032cbe09cf2f94312db82496ec236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d3fe9025a4e0da9175e186471a3021d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a5d3fe9025a4e0da9175e186471a3021d">WORKBENCH_CONFIG_DEFINE_STRUCT</a>(type,  field,  default)&#160;&#160;&#160;type field;</td></tr>
+<tr class="memdesc:a5d3fe9025a4e0da9175e186471a3021d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define a field in the configuration structure.  <a href="workbench__config_8h.html#a5d3fe9025a4e0da9175e186471a3021d">More...</a><br /></td></tr>
+<tr class="separator:a5d3fe9025a4e0da9175e186471a3021d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a1d700fdc85afd9fb6bd1752d4699e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a32a1d700fdc85afd9fb6bd1752d4699e">WORKBENCH_CONFIG_SET_DEFAULTS</a>(type,  field,  default)&#160;&#160;&#160;.field = default,</td></tr>
+<tr class="memdesc:a32a1d700fdc85afd9fb6bd1752d4699e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to set default values for configuration fields.  <a href="workbench__config_8h.html#a32a1d700fdc85afd9fb6bd1752d4699e">More...</a><br /></td></tr>
+<tr class="separator:a32a1d700fdc85afd9fb6bd1752d4699e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fdab419658a1cb9855750cb1dd3b3ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a5fdab419658a1cb9855750cb1dd3b3ca">WORKBENCH_CONFIG_DEFINE_SETTERS</a>(type,  field,  default)&#160;&#160;&#160;  void config_set_##field(type field);</td></tr>
+<tr class="memdesc:a5fdab419658a1cb9855750cb1dd3b3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to define setter function declarations for configuration fields.  <a href="workbench__config_8h.html#a5fdab419658a1cb9855750cb1dd3b3ca">More...</a><br /></td></tr>
+<tr class="separator:a5fdab419658a1cb9855750cb1dd3b3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae438ca6f2f81b6aa197afae092a26ccd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#ae438ca6f2f81b6aa197afae092a26ccd">WORKBENCH_CONFIG_IMPLEMENT_SETTERS</a>(type,  field,  default)</td></tr>
+<tr class="memdesc:ae438ca6f2f81b6aa197afae092a26ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to implement setter functions for configuration fields.  <a href="workbench__config_8h.html#ae438ca6f2f81b6aa197afae092a26ccd">More...</a><br /></td></tr>
+<tr class="separator:ae438ca6f2f81b6aa197afae092a26ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05447f16732c76b0a6106b83629d1873"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#a05447f16732c76b0a6106b83629d1873">WORKBENCH_CONFIG_PARSE_ARGUMENTS</a>(type,  field,  default)</td></tr>
+<tr class="memdesc:a05447f16732c76b0a6106b83629d1873"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to parse configuration arguments.  <a href="workbench__config_8h.html#a05447f16732c76b0a6106b83629d1873">More...</a><br /></td></tr>
+<tr class="separator:a05447f16732c76b0a6106b83629d1873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7d19e62c05bbbf74c044dc30429ca25"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#af7d19e62c05bbbf74c044dc30429ca25">WORKBENCH_CONFIG_PARSE_STRING</a>(type,  field,  default)</td></tr>
+<tr class="memdesc:af7d19e62c05bbbf74c044dc30429ca25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to parse configuration field values from strings.  <a href="workbench__config_8h.html#af7d19e62c05bbbf74c044dc30429ca25">More...</a><br /></td></tr>
+<tr class="separator:af7d19e62c05bbbf74c044dc30429ca25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad657956d5b7bb3aa256f82803b82e98b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__config_8h.html#ad657956d5b7bb3aa256f82803b82e98b">WORKBENCH_FLAG_DEFINE</a>(FLAG)&#160;&#160;&#160;FLAG = (1 &lt;&lt; FLAG##_BIT),</td></tr>
+<tr class="memdesc:ad657956d5b7bb3aa256f82803b82e98b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines actual values for feature flags.  <a href="workbench__config_8h.html#ad657956d5b7bb3aa256f82803b82e98b">More...</a><br /></td></tr>
+<tr class="separator:ad657956d5b7bb3aa256f82803b82e98b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Configuration settings and utility functions for Workbench audio and MIDI applications. </p>
-<p>This header file defines the configuration structure and related macros for managing audio and MIDI settings in Workbench applications. It includes default values, flag enumerations, and function prototypes for initializing and managing the configuration. </p>
+<div class="textblock"><p>Configuration settings and macros for Workbench audio and MIDI applications. </p>
+<p>This header file defines the configuration structure and related macros for managing audio and MIDI settings in Workbench applications. It includes default values, flag enumerations, and macros for initializing and managing the configuration. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a16d5c79bfe022d49a9231400bd77b25e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16d5c79bfe022d49a9231400bd77b25e">&#9670;&nbsp;</a></span>CONFIG</h2>
+<a id="a5fdab419658a1cb9855750cb1dd3b3ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fdab419658a1cb9855750cb1dd3b3ca">&#9670;&nbsp;</a></span>WORKBENCH_CONFIG_DEFINE_SETTERS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CONFIG</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">FIELD</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  FIELD(<span class="keywordtype">char</span> *, midi_input, NULL)                                              \</div>
-<div class="line">  FIELD(<span class="keywordtype">char</span> *, midi_output, NULL)                                             \</div>
-<div class="line">  FIELD(<span class="keywordtype">int</span>, midi_output_latecncy, 0)                                          \</div>
-<div class="line">  FIELD(<span class="keywordtype">int</span>, midi_buffer_size, 1024)                                           \</div>
-<div class="line">  FIELD(<span class="keywordtype">char</span> *, audio_input, NULL)                                             \</div>
-<div class="line">  FIELD(<span class="keywordtype">char</span> *, audio_output, NULL)                                            \</div>
-<div class="line">  FIELD(<span class="keywordtype">double</span>, sample_rate, 44100.0)                                          \</div>
-<div class="line">  FIELD(uint32_t, block_size, 512U)                                            \</div>
-<div class="line">  FIELD(uint32_t, audio_flags, 0U)                                             \</div>
-<div class="line">  FIELD(<span class="keywordtype">int</span>, in_channel_count, <a class="code" href="workbench__config_8h.html#a15b16a6ea7016cfee8514844b0b22915">DEFAULT_IN_CHANNELS_COUNT</a>)                      \</div>
-<div class="line">  FIELD(<span class="keywordtype">int</span>, out_channel_count, <a class="code" href="workbench__config_8h.html#a501db95d247f1f2361dd208a1c141d41">DEFAULT_OUT_CHANNELS_COUNT</a>)                    \</div>
-<div class="line">  FIELD(<span class="keywordtype">double</span>, suggested_latency, -1.0)                                       \</div>
-<div class="line">  FIELD(uint32_t, <a class="code" href="workbench__config_8h.html#ab6b306ef981f5e21bb41ea2c2dbe8cd9">flags</a>, 0U)                                                   \</div>
-<div class="line">  FIELD(<span class="keywordtype">void</span> *, user_data, NULL)                                               \</div>
-<div class="line">  FIELD(uint8_t, log_level, 4)</div>
-<div class="ttc" id="aworkbench__config_8h_html_a15b16a6ea7016cfee8514844b0b22915"><div class="ttname"><a href="workbench__config_8h.html#a15b16a6ea7016cfee8514844b0b22915">DEFAULT_IN_CHANNELS_COUNT</a></div><div class="ttdeci">#define DEFAULT_IN_CHANNELS_COUNT</div><div class="ttdoc">Defines the default number of audio input channels.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:43</div></div>
-<div class="ttc" id="aworkbench__config_8h_html_a501db95d247f1f2361dd208a1c141d41"><div class="ttname"><a href="workbench__config_8h.html#a501db95d247f1f2361dd208a1c141d41">DEFAULT_OUT_CHANNELS_COUNT</a></div><div class="ttdeci">#define DEFAULT_OUT_CHANNELS_COUNT</div><div class="ttdoc">Defines the default number of audio output channels.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:45</div></div>
-<div class="ttc" id="aworkbench__config_8h_html_ab6b306ef981f5e21bb41ea2c2dbe8cd9"><div class="ttname"><a href="workbench__config_8h.html#ab6b306ef981f5e21bb41ea2c2dbe8cd9">flags</a></div><div class="ttdeci">flags</div><div class="ttdoc">Enumeration of feature flags.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:96</div></div>
-</div><!-- fragment -->
-<p>Defines configuration fields and their default values using the X-macro technique. </p>
-<p>The <code>CONFIG</code> macro uses the X-macro technique to define a list of configuration fields along with their types and default values. By passing a <code>FIELD</code> macro to <code>CONFIG</code>, you can generate different pieces of code, such as structure definitions, initializers, or setters, based on the same set of configuration fields.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">FIELD</td><td>A macro that takes three parameters: type, name, and default value of a field.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Example Usage: To define a structure with the configuration fields: </p><div class="fragment"><div class="line"><span class="preprocessor">#define DEFINE_STRUCT(type, name, default) type name;</span></div>
-<div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line">    <a class="code" href="workbench__config_8h.html#a16d5c79bfe022d49a9231400bd77b25e">CONFIG</a>(<a class="code" href="workbench__config_8h.html#a3e24b6ea1a37ff08f1a07bd586fe527e">DEFINE_STRUCT</a>)</div>
-<div class="line">} <a class="code" href="structConfig.html">Config</a>;</div>
-<div class="line"><span class="preprocessor">#undef DEFINE_STRUCT</span></div>
-<div class="ttc" id="astructConfig_html"><div class="ttname"><a href="structConfig.html">Config</a></div><div class="ttdoc">Defines the structure for configuration settings.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:183</div></div>
-<div class="ttc" id="aworkbench__config_8h_html_a16d5c79bfe022d49a9231400bd77b25e"><div class="ttname"><a href="workbench__config_8h.html#a16d5c79bfe022d49a9231400bd77b25e">CONFIG</a></div><div class="ttdeci">#define CONFIG(FIELD)</div><div class="ttdoc">Defines configuration fields and their default values using the X-macro technique.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:130</div></div>
-<div class="ttc" id="aworkbench__config_8h_html_a3e24b6ea1a37ff08f1a07bd586fe527e"><div class="ttname"><a href="workbench__config_8h.html#a3e24b6ea1a37ff08f1a07bd586fe527e">DEFINE_STRUCT</a></div><div class="ttdeci">#define DEFINE_STRUCT(type, field, default)</div><div class="ttdoc">Macro to define a field in the configuration structure.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:160</div></div>
-</div><!-- fragment --><p>To generate setter functions for the configuration fields: </p><div class="fragment"><div class="line"><span class="preprocessor">#define DEFINE_SETTERS(type, name, default) \</span></div>
-<div class="line"><span class="preprocessor">    void set_##name(type value) { config.name = value; }</span></div>
-<div class="line"><a class="code" href="workbench__config_8h.html#a16d5c79bfe022d49a9231400bd77b25e">CONFIG</a>(<a class="code" href="workbench__config_8h.html#a26b8f871020948293f39603982bb135d">DEFINE_SETTERS</a>)</div>
-<div class="line"><span class="preprocessor">#undef DEFINE_SETTERS</span></div>
-<div class="ttc" id="aworkbench__config_8h_html_a26b8f871020948293f39603982bb135d"><div class="ttname"><a href="workbench__config_8h.html#a26b8f871020948293f39603982bb135d">DEFINE_SETTERS</a></div><div class="ttdeci">#define DEFINE_SETTERS(type, field, default)</div><div class="ttdoc">Macro to define setter function declarations for configuration fields.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:205</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a id="a46929313f236a3c9e8472fd56d95b6e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46929313f236a3c9e8472fd56d95b6e9">&#9670;&nbsp;</a></span>DEFINE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DEFINE</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">FLAG</td><td>)</td>
-          <td>&#160;&#160;&#160;FLAG = (1 &lt;&lt; FLAG##_BIT),</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Defines actual values for feature flags. </p>
-<p>The <code>DEFINE</code> macro assigns bitwise values to each feature flag by shifting <code>1</code> left by the corresponding bit index from the <code>flag_bits</code> enumeration.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">FLAG</td><td>The macro parameter representing a feature flag. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a26b8f871020948293f39603982bb135d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26b8f871020948293f39603982bb135d">&#9670;&nbsp;</a></span>DEFINE_SETTERS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DEFINE_SETTERS</td>
+          <td class="memname">#define WORKBENCH_CONFIG_DEFINE_SETTERS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">type, </td>
@@ -357,7 +166,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work
 </div><div class="memdoc">
 
 <p>Macro to define setter function declarations for configuration fields. </p>
-<p>The <code>DEFINE_SETTERS</code> macro generates the declaration of setter functions for each field in the configuration structure. Each generated function allows setting the value of a specific configuration field.</p>
+<p>The <code>WORKBENCH_CONFIG_DEFINE_SETTERS</code> macro generates the declaration of setter functions for each field in the configuration structure. Each generated function allows setting the value of a specific configuration field.</p>
 <p>This macro is intended to be passed to the <code>CONFIG</code> macro to generate the setter function declarations.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -370,14 +179,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work
 
 </div>
 </div>
-<a id="a3e24b6ea1a37ff08f1a07bd586fe527e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3e24b6ea1a37ff08f1a07bd586fe527e">&#9670;&nbsp;</a></span>DEFINE_STRUCT</h2>
+<a id="a5d3fe9025a4e0da9175e186471a3021d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d3fe9025a4e0da9175e186471a3021d">&#9670;&nbsp;</a></span>WORKBENCH_CONFIG_DEFINE_STRUCT</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEFINE_STRUCT</td>
+          <td class="memname">#define WORKBENCH_CONFIG_DEFINE_STRUCT</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">type, </td>
@@ -403,7 +212,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work
 </div><div class="memdoc">
 
 <p>Macro to define a field in the configuration structure. </p>
-<p>The <code>DEFINE_STRUCT</code> macro specifies how each field in the configuration structure should be declared.</p>
+<p>The <code>WORKBENCH_CONFIG_DEFINE_STRUCT</code> macro specifies how each field in the configuration structure should be declared.</p>
 <p>This macro is intended to be passed to the <code>CONFIG</code> macro to generate the structure definition.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -416,307 +225,234 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="work
 
 </div>
 </div>
-<a id="afd4a54d71549af6633ae069ac7161e16"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd4a54d71549af6633ae069ac7161e16">&#9670;&nbsp;</a></span>ENUMERATE</h2>
+<a id="ae438ca6f2f81b6aa197afae092a26ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae438ca6f2f81b6aa197afae092a26ccd">&#9670;&nbsp;</a></span>WORKBENCH_CONFIG_IMPLEMENT_SETTERS</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ENUMERATE</td>
+          <td class="memname">#define WORKBENCH_CONFIG_IMPLEMENT_SETTERS</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">FLAG</td><td>)</td>
-          <td>&#160;&#160;&#160;FLAG##_BIT,</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">field, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">default&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  __attribute__((weak)) <span class="keywordtype">void</span> config_set_##field(type field) {                  \</div>
+<div class="line">    __cfg.field = field;                                                       \</div>
+<div class="line">  }</div>
+</div><!-- fragment -->
+<p>Macro to implement setter functions for configuration fields. </p>
+<p>The <code>WORKBENCH_CONFIG_IMPLEMENT_SETTERS</code> macro generates the implementation of setter functions for each field in the configuration structure. Each generated function allows setting the value of a specific configuration field.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The data type of the field. </td></tr>
+    <tr><td class="paramname">field</td><td>The name of the field. </td></tr>
+    <tr><td class="paramname">default</td><td>The default value of the field (not used here). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a05447f16732c76b0a6106b83629d1873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05447f16732c76b0a6106b83629d1873">&#9670;&nbsp;</a></span>WORKBENCH_CONFIG_PARSE_ARGUMENTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WORKBENCH_CONFIG_PARSE_ARGUMENTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">field, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">default&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(arg, #field) == 0) {                                         \</div>
+<div class="line">    arguments[(*args_parsed)++] = (<a class="code" href="structArgument__t.html">Argument_t</a>){.arg = arg, .val = val};        \</div>
+<div class="line">  }</div>
+<div class="ttc" id="astructArgument__t_html"><div class="ttname"><a href="structArgument__t.html">Argument_t</a></div><div class="ttdoc">Structure to store command-line arguments.</div><div class="ttdef"><b>Definition:</b> workbench_config.c:21</div></div>
+</div><!-- fragment -->
+<p>Macro to parse configuration arguments. </p>
+<p>The <code>WORKBENCH_CONFIG_PARSE_ARGUMENTS</code> macro adds parsed arguments to an array if they match a configuration field name. This is used during the configuration parsing process.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The data type of the field. </td></tr>
+    <tr><td class="paramname">field</td><td>The name of the field. </td></tr>
+    <tr><td class="paramname">default</td><td>The default value of the field (not used here). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af7d19e62c05bbbf74c044dc30429ca25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7d19e62c05bbbf74c044dc30429ca25">&#9670;&nbsp;</a></span>WORKBENCH_CONFIG_PARSE_STRING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WORKBENCH_CONFIG_PARSE_STRING</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">field, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">default&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (strcmp(arg, #field) == 0) {                                              \</div>
+<div class="line">    if (IS_TEXT_TYPE((type) <span class="keywordflow">default</span>)) {                                        \</div>
+<div class="line">      *((<span class="keywordtype">char</span> **)result) = strdup(val);                                        \</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IS_INT_TYPE((type) <span class="keywordflow">default</span>)) {                                  \</div>
+<div class="line">      *((int32_t *)result) = strtoll(val, (<span class="keywordtype">char</span> **)NULL, 10);                  \</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IS_UINT_TYPE((type) <span class="keywordflow">default</span>)) {                                 \</div>
+<div class="line">      *((uint32_t *)result) = strtoull(val, (<span class="keywordtype">char</span> **)NULL, 10);                \</div>
+<div class="line">    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IS_FLOAT_TYPE((type) <span class="keywordflow">default</span>)) {                                \</div>
+<div class="line">      *((<span class="keywordtype">double</span> *)result) = strtod(val, (<span class="keywordtype">char</span> **)NULL);                        \</div>
+<div class="line">    } <span class="keywordflow">else</span> {                                                                   \</div>
+<div class="line">      log_w(<span class="stringliteral">&quot;Unknown type &#39;%s&#39;. Can not take &#39;%s&#39; from config.&quot;</span>, #type, arg);  \</div>
+<div class="line">      free(result);                                                            \</div>
+<div class="line">      return;                                                                  \</div>
+<div class="line">    }                                                                          \</div>
+<div class="line">    config-&gt;field = *((type *)result);                                         \</div>
+<div class="line">  } <span class="keywordflow">else</span></div>
+</div><!-- fragment -->
+<p>Macro to parse configuration field values from strings. </p>
+<p>The <code>WORKBENCH_CONFIG_PARSE_STRING</code> macro parses the value of a configuration field from a string representation and assigns it to the appropriate field in the configuration structure.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The data type of the field. </td></tr>
+    <tr><td class="paramname">field</td><td>The name of the field. </td></tr>
+    <tr><td class="paramname">default</td><td>The default value of the field. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32a1d700fdc85afd9fb6bd1752d4699e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a1d700fdc85afd9fb6bd1752d4699e">&#9670;&nbsp;</a></span>WORKBENCH_CONFIG_SET_DEFAULTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WORKBENCH_CONFIG_SET_DEFAULTS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">field, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">default&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;.field = default,</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enumerates flag bits. </p>
-<p>The <code>ENUMERATE</code> macro appends <code>_BIT</code> to each flag name, creating an enumeration of flag bits. This enumeration assigns a unique index to each flag, which can be used to generate bitwise representations.</p>
+<p>Macro to set default values for configuration fields. </p>
+<p>The <code>WORKBENCH_CONFIG_SET_DEFAULTS</code> macro initializes the fields of the configuration structure with default values.</p>
+<p>This macro is intended to be used when defining the default configuration settings.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>The data type of the field. </td></tr>
+    <tr><td class="paramname">field</td><td>The name of the field. </td></tr>
+    <tr><td class="paramname">default</td><td>The default value of the field. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad657956d5b7bb3aa256f82803b82e98b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad657956d5b7bb3aa256f82803b82e98b">&#9670;&nbsp;</a></span>WORKBENCH_FLAG_DEFINE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WORKBENCH_FLAG_DEFINE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">FLAG</td><td>)</td>
+          <td>&#160;&#160;&#160;FLAG = (1 &lt;&lt; FLAG##_BIT),</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines actual values for feature flags. </p>
+<p>The <code>DEFINE</code> macro assigns bitwise values to each feature flag by shifting <code>1</code> left by the corresponding bit index from the <code>flag_bits</code> enumeration.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">FLAG</td><td>The macro parameter representing a feature flag. </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="afbb888dc9b7a5266a291ded9b304a051"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbb888dc9b7a5266a291ded9b304a051">&#9670;&nbsp;</a></span>FLAGS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FLAGS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">FLAG</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  FLAG(DISABLE_MIDI)                                                           \</div>
-<div class="line">  FLAG(DISABLE_AUDIO)                                                          \</div>
-<div class="line">  FLAG(DISABLE_MIDI_IN)                                                        \</div>
-<div class="line">  FLAG(DISABLE_MIDI_OUT)                                                       \</div>
-<div class="line">  FLAG(DISABLE_AUDIO_IN)                                                       \</div>
-<div class="line">  FLAG(DISABLE_AUDIO_OUT)</div>
-</div><!-- fragment -->
-<p>Defines a list of feature flags and their bitwise representations. </p>
-<p>The <code>FLAGS</code> macro is used to list various feature flags that can be enabled or disabled in the configuration. Each feature flag corresponds to a specific functionality (e.g., MIDI, audio) and has associated enable/disable options for input and output.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="workbench__config_8h.html#afd4a54d71549af6633ae069ac7161e16" title="Enumerates flag bits.">ENUMERATE</a> </dd>
-<dd>
-<a class="el" href="workbench__config_8h.html#a46929313f236a3c9e8472fd56d95b6e9" title="Defines actual values for feature flags.">DEFINE</a> </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="ad01032cbe09cf2f94312db82496ec236"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad01032cbe09cf2f94312db82496ec236">&#9670;&nbsp;</a></span>argparse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void argparse </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structArgument__t.html">Argument_t</a> *&#160;</td>
-          <td class="paramname"><em>arguments</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>args_parsed</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>config_file</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parse command-line arguments and store them in the arguments array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">argc</td><td>The number of command-line arguments. </td></tr>
-    <tr><td class="paramname">argv</td><td>The array of command-line argument strings. </td></tr>
-    <tr><td class="paramname">arguments</td><td>The array to store parsed arguments. </td></tr>
-    <tr><td class="paramname">args_parsed</td><td>Pointer to the number of parsed arguments. </td></tr>
-    <tr><td class="paramname">config_file</td><td>Pointer to the configuration file path. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a092dcf94b7f8401790f6ede857121f2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a092dcf94b7f8401790f6ede857121f2c">&#9670;&nbsp;</a></span>config_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structConfig.html">Config</a>* config_init </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">AudioCallback</a>&#160;</td>
-          <td class="paramname"><em>audio_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="workbench__midi_8h.html#ac3a6502ef7b764a0c4ac32264816910d">MidiCallback</a>&#160;</td>
-          <td class="paramname"><em>midi_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>user_data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes the configuration with the specified audio and MIDI callbacks. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">audio_cb</td><td>The audio callback function. </td></tr>
-    <tr><td class="paramname">midi_cb</td><td>The MIDI callback function. </td></tr>
-    <tr><td class="paramname">user_data</td><td>A pointer to the cistom user data. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the initialized configuration structure. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="delay_8c-example.html#a2">delay.c</a>, and <a class="el" href="midi_monitor_8c-example.html#a30">midi_monitor.c</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="a5b69eea0d2efcc36a4586d33986cd808"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b69eea0d2efcc36a4586d33986cd808">&#9670;&nbsp;</a></span>get_config()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structConfig.html">Config</a>* get_config </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieves the current configuration. </p>
-<dl class="section return"><dt>Returns</dt><dd>A pointer to the current configuration structure. </dd></dl>
-
-</div>
-</div>
-<a id="a92db974a723bb3fc03d7c7d9d5c610f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92db974a723bb3fc03d7c7d9d5c610f1">&#9670;&nbsp;</a></span>get_log_level()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t get_log_level </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Retrieves the log level. </p>
-<p>Log level determines the verbosity of the logging. The higher the value, the more verbose the logging:</p><ul>
-<li>0: No logging</li>
-<li>1: Error logging</li>
-<li>2: Warning and Error logging</li>
-<li>3: Info, Warning, and Error logging</li>
-<li>4: Debug, Info, Warning, and Error logging</li>
-</ul>
-<dl class="section return"><dt>Returns</dt><dd>An integer value from zero to four. </dd></dl>
-
-</div>
-</div>
-<a id="ab355d010cdfc1d9034810071f2113aa1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab355d010cdfc1d9034810071f2113aa1">&#9670;&nbsp;</a></span>parse_val()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void parse_val </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structConfig.html">Config</a> *&#160;</td>
-          <td class="paramname"><em>config</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>arg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>val</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parse a value from a string and set the corresponding field in the configuration. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">config</td><td>Pointer to the <a class="el" href="structConfig.html" title="Defines the structure for configuration settings.">Config</a> structure. </td></tr>
-    <tr><td class="paramname">arg</td><td>The argument name. </td></tr>
-    <tr><td class="paramname">val</td><td>The argument value as a string. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a3000aa679873ca624e13dd2787c23717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3000aa679873ca624e13dd2787c23717">&#9670;&nbsp;</a></span>read_config_from_file()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int read_config_from_file </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>filename</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structConfig.html">Config</a> *&#160;</td>
-          <td class="paramname"><em>config</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Reads configuration settings from a file. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">filename</td><td>The name of the file to read the configuration from. </td></tr>
-    <tr><td class="paramname">config</td><td>A pointer to the configuration structure to populate. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>An integer indicating success (0) or failure (non-zero). </dd></dl>
 
 </div>
 </div>

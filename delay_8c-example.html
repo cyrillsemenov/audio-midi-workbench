@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -92,7 +91,7 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <p>Example implementation of a delay effect with feedback and filtering using WorkBench.This file provides an example of implementing a delay effect with feedback and filtering in an audio processing application. It uses PortAudio for audio input and output, and includes MIDI control for adjusting delay parameters.</p>
 <p>The delay effect is implemented using a circular buffer, and the pitch can be adjusted by changing the playback speed. Feedback and filtering are also applied to the delayed signal.</p>
 <div class="fragment"><div class="line"> </div>
-<div class="line"><span class="preprocessor">#include &quot;workbench.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="workbench_8h.html">workbench.h</a>&quot;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#define DELAY_CC 48</span></div>
@@ -108,8 +107,8 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line"><a name="_a0"></a><a class="code" href="structConfig.html">Config</a> *cfg;</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line">  <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *buffer;        </div>
-<div class="line">  <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *filter_buffer; </div>
+<div class="line">  <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *buffer;        </div>
+<div class="line">  <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *filter_buffer; </div>
 <div class="line">  <span class="keywordtype">size_t</span> write;                 </div>
 <div class="line">  <span class="keywordtype">size_t</span> length;                </div>
 <div class="line">  <span class="keywordtype">double</span> delay;                 </div>
@@ -122,9 +121,9 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> free_delay_buffer(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> delay_put(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del, <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> item);</div>
+<div class="line"><span class="keywordtype">void</span> delay_put(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del, <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> item);</div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> delay_get(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del);</div>
+<div class="line"><a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> delay_get(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Audio callback function to handle recording and playback</span></div>
 <div class="line"><span class="keywordtype">void</span> audio_cb(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer,</div>
@@ -135,7 +134,7 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> **argv) {</div>
 <div class="line">  <a class="code" href="structDelayBuffer.html">DelayBuffer</a> del;</div>
-<div class="line">  cfg = <a name="a2"></a><a class="code" href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">config_init</a>(argc, argv, audio_cb, midi_cb, &amp;del);</div>
+<div class="line">  cfg = <a name="a2"></a><a class="code" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a>(argc, argv, audio_cb, midi_cb, &amp;del);</div>
 <div class="line">  delay_init(&amp;del);</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
@@ -152,12 +151,12 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line">  <span class="keywordflow">if</span> (del == NULL) {</div>
 <div class="line">    <span class="keywordflow">return</span>;</div>
 <div class="line">  }</div>
-<div class="line">  <span class="keyword">const</span> <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *in = (<span class="keyword">const</span> <span class="keywordtype">float</span> *)input_buffer;</div>
-<div class="line">  <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *out = (<a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)output_buffer;</div>
+<div class="line">  <span class="keyword">const</span> <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *in = (<span class="keyword">const</span> <span class="keywordtype">float</span> *)input_buffer;</div>
+<div class="line">  <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *out = (<a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)output_buffer;</div>
 <div class="line"> </div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; block_size; ++i) {</div>
 <div class="line">    <span class="comment">// Read the delayed sample from the buffer</span></div>
-<div class="line">    <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> out_sample = delay_get(del);</div>
+<div class="line">    <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> out_sample = delay_get(del);</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Write the input sample to the delay buffer</span></div>
 <div class="line">    delay_put(del, in[i] * (1 - del-&gt;<a name="a3"></a><a class="code" href="structDelayBuffer.html#add4011621a115a5dfbe79f42141965a7">feedback</a>) + out_sample * del-&gt;<a class="code" href="structDelayBuffer.html#add4011621a115a5dfbe79f42141965a7">feedback</a>);</div>
@@ -204,9 +203,9 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> delay_init(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del) {</div>
 <div class="line">  del-&gt;<a name="a8"></a><a class="code" href="structDelayBuffer.html#aed790420cc62c3d09962f31798edcf3d">buffer</a> =</div>
-<div class="line">      (<a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)calloc(BUFFER_SIZE_SAMPLES, <span class="keyword">sizeof</span>(<a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a>));</div>
+<div class="line">      (<a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)calloc(BUFFER_SIZE_SAMPLES, <span class="keyword">sizeof</span>(<a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a>));</div>
 <div class="line">  del-&gt;<a name="a9"></a><a class="code" href="structDelayBuffer.html#a4f4252dd6fa93f561c726e4007e3a0a9">filter_buffer</a> =</div>
-<div class="line">      (<a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)malloc(FILTER_ORDER * <span class="keyword">sizeof</span>(<a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a>));</div>
+<div class="line">      (<a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> *)malloc(FILTER_ORDER * <span class="keyword">sizeof</span>(<a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a>));</div>
 <div class="line">  del-&gt;<a name="a10"></a><a class="code" href="structDelayBuffer.html#a8917e0c7817c7f9db6a7b06bb3c361bb">length</a> = BUFFER_SIZE_SAMPLES;</div>
 <div class="line">  del-&gt;<a name="a11"></a><a class="code" href="structDelayBuffer.html#a8f89a12a31ae1171cea5085220b30264">write</a> = 0;</div>
 <div class="line">  del-&gt;<a name="a12"></a><a class="code" href="structDelayBuffer.html#a32b5456372ba479de045b5b4784b16cd">delay</a> = del-&gt;<a class="code" href="structDelayBuffer.html#a6072f13542bbec95cc5333667ad1dbfc">delay_target</a> = 0.1; <span class="comment">// Initial delay</span></div>
@@ -219,14 +218,14 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line">  free(del-&gt;<a class="code" href="structDelayBuffer.html#a4f4252dd6fa93f561c726e4007e3a0a9">filter_buffer</a>);</div>
 <div class="line">}</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> delay_put(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del, <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> item) {</div>
+<div class="line"><span class="keywordtype">void</span> delay_put(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del, <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> item) {</div>
 <div class="line">  del-&gt;<a class="code" href="structDelayBuffer.html#aed790420cc62c3d09962f31798edcf3d">buffer</a>[del-&gt;<a class="code" href="structDelayBuffer.html#a8f89a12a31ae1171cea5085220b30264">write</a>] = item;</div>
 <div class="line">  del-&gt;<a class="code" href="structDelayBuffer.html#a8f89a12a31ae1171cea5085220b30264">write</a> = (del-&gt;<a class="code" href="structDelayBuffer.html#a8f89a12a31ae1171cea5085220b30264">write</a> + 1) % del-&gt;<a class="code" href="structDelayBuffer.html#a8917e0c7817c7f9db6a7b06bb3c361bb">length</a>; <span class="comment">// Wrap around if end is reached</span></div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#define lerp(a, b, t) (a + t * (b - a))</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> delay_get(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del) {</div>
+<div class="line"><a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> delay_get(<a class="code" href="structDelayBuffer.html">DelayBuffer</a> *del) {</div>
 <div class="line">  <span class="comment">// Interpolate the delay adjustment</span></div>
 <div class="line">  del-&gt;<a class="code" href="structDelayBuffer.html#a32b5456372ba479de045b5b4784b16cd">delay</a> = lerp(del-&gt;<a class="code" href="structDelayBuffer.html#a32b5456372ba479de045b5b4784b16cd">delay</a>, del-&gt;<a class="code" href="structDelayBuffer.html#a6072f13542bbec95cc5333667ad1dbfc">delay_target</a>, 1 / cfg-&gt;sample_rate);</div>
 <div class="line"> </div>
@@ -243,12 +242,12 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line">  <span class="keywordtype">double</span> frac = read_idx - idx0;</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Get the delayed samples from the buffer</span></div>
-<div class="line">  <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> sample0 = del-&gt;<a class="code" href="structDelayBuffer.html#aed790420cc62c3d09962f31798edcf3d">buffer</a>[idx0];</div>
-<div class="line">  <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> sample1 = del-&gt;<a class="code" href="structDelayBuffer.html#aed790420cc62c3d09962f31798edcf3d">buffer</a>[idx1];</div>
-<div class="line">  <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> interpolated_sample = lerp(sample0, sample1, frac);</div>
+<div class="line">  <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> sample0 = del-&gt;<a class="code" href="structDelayBuffer.html#aed790420cc62c3d09962f31798edcf3d">buffer</a>[idx0];</div>
+<div class="line">  <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> sample1 = del-&gt;<a class="code" href="structDelayBuffer.html#aed790420cc62c3d09962f31798edcf3d">buffer</a>[idx1];</div>
+<div class="line">  <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> interpolated_sample = lerp(sample0, sample1, frac);</div>
 <div class="line"> </div>
 <div class="line">  <span class="comment">// Apply the multi-stage low-pass filter</span></div>
-<div class="line">  <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> filtered_sample = interpolated_sample;</div>
+<div class="line">  <a class="code" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a> filtered_sample = interpolated_sample;</div>
 <div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; FILTER_ORDER; ++i) {</div>
 <div class="line">    filtered_sample = del-&gt;<a class="code" href="structDelayBuffer.html#a1eee2294135b3dba3a90225b82f7d2c9">filter_coefficient</a> * filtered_sample +</div>
 <div class="line">                      (1.0 - del-&gt;<a class="code" href="structDelayBuffer.html#a1eee2294135b3dba3a90225b82f7d2c9">filter_coefficient</a>) * del-&gt;<a class="code" href="structDelayBuffer.html#a4f4252dd6fa93f561c726e4007e3a0a9">filter_buffer</a>[i];</div>
@@ -258,7 +257,9 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="line">  <span class="comment">// Return the interpolated sample</span></div>
 <div class="line">  <span class="keywordflow">return</span> filtered_sample;</div>
 <div class="line">}</div>
-<div class="ttc" id="astructConfig_html"><div class="ttname"><a href="structConfig.html">Config</a></div><div class="ttdoc">Defines the structure for configuration settings.</div><div class="ttdef"><b>Definition:</b> workbench_config.h:183</div></div>
+<div class="ttc" id="agroup__audio_html_ga51f199b1cf24bad62edbe399e4e5aa7a"><div class="ttname"><a href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a></div><div class="ttdeci">SAMPLE AudioSample_t</div><div class="ttdoc">Defines AudioSample_t as the type for audio samples.</div><div class="ttdef"><b>Definition:</b> workbench.h:41</div></div>
+<div class="ttc" id="agroup__config_html_ga092dcf94b7f8401790f6ede857121f2c"><div class="ttname"><a href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">config_init</a></div><div class="ttdeci">Config * config_init(int argc, char **argv, AudioCallback audio_cb, MidiCallback midi_cb, void *user_data)</div><div class="ttdoc">Initializes the configuration with the specified audio and MIDI callbacks.</div><div class="ttdef"><b>Definition:</b> workbench_config.c:41</div></div>
+<div class="ttc" id="astructConfig_html"><div class="ttname"><a href="structConfig.html">Config</a></div><div class="ttdoc">Defines the structure for configuration settings.</div><div class="ttdef"><b>Definition:</b> workbench.h:287</div></div>
 <div class="ttc" id="astructDelayBuffer_html"><div class="ttname"><a href="structDelayBuffer.html">DelayBuffer</a></div><div class="ttdef"><b>Definition:</b> delay.c:31</div></div>
 <div class="ttc" id="astructDelayBuffer_html_a1eee2294135b3dba3a90225b82f7d2c9"><div class="ttname"><a href="structDelayBuffer.html#a1eee2294135b3dba3a90225b82f7d2c9">DelayBuffer::filter_coefficient</a></div><div class="ttdeci">double filter_coefficient</div><div class="ttdef"><b>Definition:</b> delay.c:39</div></div>
 <div class="ttc" id="astructDelayBuffer_html_a32b5456372ba479de045b5b4784b16cd"><div class="ttname"><a href="structDelayBuffer.html#a32b5456372ba479de045b5b4784b16cd">DelayBuffer::delay</a></div><div class="ttdeci">double delay</div><div class="ttdef"><b>Definition:</b> delay.c:36</div></div>
@@ -268,10 +269,9 @@ $(document).ready(function(){initNavTree('delay_8c-example.html',''); initResiza
 <div class="ttc" id="astructDelayBuffer_html_a8f89a12a31ae1171cea5085220b30264"><div class="ttname"><a href="structDelayBuffer.html#a8f89a12a31ae1171cea5085220b30264">DelayBuffer::write</a></div><div class="ttdeci">size_t write</div><div class="ttdef"><b>Definition:</b> delay.c:34</div></div>
 <div class="ttc" id="astructDelayBuffer_html_add4011621a115a5dfbe79f42141965a7"><div class="ttname"><a href="structDelayBuffer.html#add4011621a115a5dfbe79f42141965a7">DelayBuffer::feedback</a></div><div class="ttdeci">double feedback</div><div class="ttdef"><b>Definition:</b> delay.c:38</div></div>
 <div class="ttc" id="astructDelayBuffer_html_aed790420cc62c3d09962f31798edcf3d"><div class="ttname"><a href="structDelayBuffer.html#aed790420cc62c3d09962f31798edcf3d">DelayBuffer::buffer</a></div><div class="ttdeci">AudioSample_t * buffer</div><div class="ttdef"><b>Definition:</b> delay.c:32</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_a51f199b1cf24bad62edbe399e4e5aa7a"><div class="ttname"><a href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a></div><div class="ttdeci">SAMPLE AudioSample_t</div><div class="ttdoc">Defines AudioSample_t as the type for audio samples.</div><div class="ttdef"><b>Definition:</b> workbench_audio.h:68</div></div>
-<div class="ttc" id="aworkbench__config_8h_html_a092dcf94b7f8401790f6ede857121f2c"><div class="ttname"><a href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">config_init</a></div><div class="ttdeci">Config * config_init(int argc, char **argv, AudioCallback audio_cb, MidiCallback midi_cb, void *user_data)</div><div class="ttdoc">Initializes the configuration with the specified audio and MIDI callbacks.</div><div class="ttdef"><b>Definition:</b> workbench_config.c:38</div></div>
-<div class="ttc" id="aworkbench__midi_8h_html_a64b08db61b463b1769d8f18fae1ea8e4"><div class="ttname"><a href="workbench__midi_8h.html#a64b08db61b463b1769d8f18fae1ea8e4">MIDI_CTRL</a></div><div class="ttdeci">#define MIDI_CTRL</div><div class="ttdoc">MIDI Control Change message.</div><div class="ttdef"><b>Definition:</b> workbench_midi.h:50</div></div>
-<div class="ttc" id="aworkbench__midi_8h_html_ad0a97b26a50383f240ed1863bd6c966b"><div class="ttname"><a href="workbench__midi_8h.html#ad0a97b26a50383f240ed1863bd6c966b">MIDI_CODE_MASK</a></div><div class="ttdeci">#define MIDI_CODE_MASK</div><div class="ttdoc">Mask to extract the MIDI message type.</div><div class="ttdef"><b>Definition:</b> workbench_midi.h:38</div></div>
+<div class="ttc" id="aworkbench_8h_html"><div class="ttname"><a href="workbench_8h.html">workbench.h</a></div></div>
+<div class="ttc" id="aworkbench__midi_8h_html_a64b08db61b463b1769d8f18fae1ea8e4"><div class="ttname"><a href="workbench__midi_8h.html#a64b08db61b463b1769d8f18fae1ea8e4">MIDI_CTRL</a></div><div class="ttdeci">#define MIDI_CTRL</div><div class="ttdoc">MIDI Control Change message.</div><div class="ttdef"><b>Definition:</b> workbench_midi.h:24</div></div>
+<div class="ttc" id="aworkbench__midi_8h_html_ad0a97b26a50383f240ed1863bd6c966b"><div class="ttname"><a href="workbench__midi_8h.html#ad0a97b26a50383f240ed1863bd6c966b">MIDI_CODE_MASK</a></div><div class="ttdeci">#define MIDI_CODE_MASK</div><div class="ttdoc">Mask to extract the MIDI message type.</div><div class="ttdef"><b>Definition:</b> workbench_midi.h:12</div></div>
 </div><!-- fragment --> </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

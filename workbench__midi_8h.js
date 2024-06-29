@@ -28,8 +28,5 @@ var workbench__midi_8h =
     [ "MIDI_SYSEX", "workbench__midi_8h.html#aa2197f6ca200566c0986e737edd211e4", null ],
     [ "MIDI_TIME_CLOCK", "workbench__midi_8h.html#abfb348193aa3d495c67008b06c274f76", null ],
     [ "MIDI_TOUCH", "workbench__midi_8h.html#a3bbe71db78d44f6f45cdd778fc86ffbb", null ],
-    [ "MIDI_TUNE_REQ", "workbench__midi_8h.html#aac3142724fa4e0f26fa1e000b4b349ed", null ],
-    [ "MidiCallback", "workbench__midi_8h.html#ac3a6502ef7b764a0c4ac32264816910d", null ],
-    [ "midi_deinit", "workbench__midi_8h.html#a38b6a4a6ec42191fe62ab3b79826020d", null ],
-    [ "midi_init", "workbench__midi_8h.html#a98b3c7c8e3e254ea1026ff3f781add0d", null ]
+    [ "MIDI_TUNE_REQ", "workbench__midi_8h.html#aac3142724fa4e0f26fa1e000b4b349ed", null ]
 ];

@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -90,41 +89,27 @@ $(document).ready(function(){initNavTree('workbench__audio_8h_source.html',''); 
 </div><!--header-->
 <div class="contents">
 <a href="workbench__audio_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;portaudio.h&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#ifndef SAMPLE_FORMAT</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#a4a1dc76804dee55440195a35b866d570">   39</a></span>&#160;<span class="preprocessor">#define SAMPLE_FORMAT Float32</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define _SAMPLE_TYPE_NAME(T) _SAMPLE_##T</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#define _SAMPLE_TYPE(T) _SAMPLE_TYPE_NAME(T)</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#define _SAMPLE_Float32 float</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#define _SAMPLE_Int32 uint32_t</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#define _SAMPLE_Int24 uint32_t</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#define _SAMPLE_Int16 uint16_t</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#define _SAMPLE_Int8 uint8_t</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#afc597c76b4f04a2da506a240d51d89a0">   58</a></span>&#160;<span class="preprocessor">#define SAMPLE _SAMPLE_TYPE(SAMPLE_FORMAT)</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">   68</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="workbench__audio_8h.html#afc597c76b4f04a2da506a240d51d89a0">SAMPLE</a> <a class="code" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#define _PA_SAMPLE_FORMAT_HELPER(x) pa##x</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#define _PA_SAMPLE_FORMAT(x) _PA_SAMPLE_FORMAT_HELPER(x)</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#a862fffa20ad836eabfcc90ee88523014">   73</a></span>&#160;<span class="preprocessor">#define PA_SAMPLE_FORMAT _PA_SAMPLE_FORMAT(SAMPLE_FORMAT)</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">  100</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">AudioCallback</a>)(<span class="keyword">const</span> <span class="keywordtype">void</span> *, <span class="keywordtype">void</span> *, <span class="keywordtype">unsigned</span> long, <span class="keywordtype">void</span> *);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keywordtype">void</span> <a class="code" href="workbench__audio_8h.html#a1057a490ba85ab32c800c0e3c9e85c78">audio_init</a>();</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keywordtype">void</span> <a class="code" href="workbench__audio_8h.html#a1ab964d5f1f968335d931910c8f01837">audio_deinit</a>();</div>
-<div class="ttc" id="aworkbench__audio_8h_html_a1057a490ba85ab32c800c0e3c9e85c78"><div class="ttname"><a href="workbench__audio_8h.html#a1057a490ba85ab32c800c0e3c9e85c78">audio_init</a></div><div class="ttdeci">void audio_init()</div><div class="ttdoc">Initializes the audio system.</div><div class="ttdef"><b>Definition:</b> workbench_audio.c:73</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_a1ab964d5f1f968335d931910c8f01837"><div class="ttname"><a href="workbench__audio_8h.html#a1ab964d5f1f968335d931910c8f01837">audio_deinit</a></div><div class="ttdeci">void audio_deinit()</div><div class="ttdoc">Deinitializes the audio system.</div><div class="ttdef"><b>Definition:</b> workbench_audio.c:116</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_a330300f923f87d69788544dca9bf95b5"><div class="ttname"><a href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">AudioCallback</a></div><div class="ttdeci">void(* AudioCallback)(const void *, void *, unsigned long, void *)</div><div class="ttdoc">Type definition for audio callback functions.</div><div class="ttdef"><b>Definition:</b> workbench_audio.h:100</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_a51f199b1cf24bad62edbe399e4e5aa7a"><div class="ttname"><a href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">AudioSample_t</a></div><div class="ttdeci">SAMPLE AudioSample_t</div><div class="ttdoc">Defines AudioSample_t as the type for audio samples.</div><div class="ttdef"><b>Definition:</b> workbench_audio.h:68</div></div>
-<div class="ttc" id="aworkbench__audio_8h_html_afc597c76b4f04a2da506a240d51d89a0"><div class="ttname"><a href="workbench__audio_8h.html#afc597c76b4f04a2da506a240d51d89a0">SAMPLE</a></div><div class="ttdeci">#define SAMPLE</div><div class="ttdoc">Defines the type for audio samples based on SAMPLE_FORMAT.</div><div class="ttdef"><b>Definition:</b> workbench_audio.h:58</div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#ifndef SAMPLE_FORMAT</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#a4a1dc76804dee55440195a35b866d570">   16</a></span>&#160;<span class="preprocessor">#define SAMPLE_FORMAT Float32</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define _SAMPLE_TYPE_NAME(T) _SAMPLE_##T</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define _SAMPLE_TYPE(T) _SAMPLE_TYPE_NAME(T)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define _SAMPLE_Float32 float</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define _SAMPLE_Int32 uint32_t</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define _SAMPLE_Int24 uint32_t</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define _SAMPLE_Int16 uint16_t</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define _SAMPLE_Int8 uint8_t</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#afc597c76b4f04a2da506a240d51d89a0">   35</a></span>&#160;<span class="preprocessor">#define SAMPLE _SAMPLE_TYPE(SAMPLE_FORMAT)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define _PA_SAMPLE_FORMAT_HELPER(x) pa##x</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define _PA_SAMPLE_FORMAT(x) _PA_SAMPLE_FORMAT_HELPER(x)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="workbench__audio_8h.html#a862fffa20ad836eabfcc90ee88523014">   41</a></span>&#160;<span class="preprocessor">#define PA_SAMPLE_FORMAT _PA_SAMPLE_FORMAT(SAMPLE_FORMAT)</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -88,29 +87,17 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <div class="textblock">Here is a list of all documented functions, variables, defines, enums, and typedefs with links to the documentation:</div>
 
 <h3><a id="index_a"></a>- a -</h3><ul>
-<li>argparse()
-: <a class="el" href="workbench__config_8h.html#ad01032cbe09cf2f94312db82496ec236">workbench_config.h</a>
-</li>
 <li>audio_deinit()
-: <a class="el" href="workbench__audio_8h.html#a1ab964d5f1f968335d931910c8f01837">workbench_audio.h</a>
-</li>
-<li>AUDIO_ENABLED
-: <a class="el" href="workbench__config_8h.html#a891e49a7107ff4b358e99ad9cdf51503">workbench_config.h</a>
-</li>
-<li>AUDIO_IN_ENABLED
-: <a class="el" href="workbench__config_8h.html#a69a830df7beb25ee34cfc45fcec2d2f9">workbench_config.h</a>
+: <a class="el" href="group__audio.html#ga1ab964d5f1f968335d931910c8f01837">workbench.h</a>
 </li>
 <li>audio_init()
-: <a class="el" href="workbench__audio_8h.html#a1057a490ba85ab32c800c0e3c9e85c78">workbench_audio.h</a>
-</li>
-<li>AUDIO_OUT_ENABLED
-: <a class="el" href="workbench__config_8h.html#a5078d49462e2b83266d3c71f1f64ed5b">workbench_config.h</a>
+: <a class="el" href="group__audio.html#ga1057a490ba85ab32c800c0e3c9e85c78">workbench.h</a>
 </li>
 <li>AudioCallback
-: <a class="el" href="workbench__audio_8h.html#a330300f923f87d69788544dca9bf95b5">workbench_audio.h</a>
+: <a class="el" href="group__audio.html#ga330300f923f87d69788544dca9bf95b5">workbench.h</a>
 </li>
 <li>AudioSample_t
-: <a class="el" href="workbench__audio_8h.html#a51f199b1cf24bad62edbe399e4e5aa7a">workbench_audio.h</a>
+: <a class="el" href="group__audio.html#ga51f199b1cf24bad62edbe399e4e5aa7a">workbench.h</a>
 </li>
 </ul>
 
@@ -120,10 +107,16 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 : <a class="el" href="workbench__logger_8h.html#a9a247ab692e39c7148de63aa1104c43b">workbench_logger.h</a>
 </li>
 <li>CONFIG
-: <a class="el" href="workbench__config_8h.html#a16d5c79bfe022d49a9231400bd77b25e">workbench_config.h</a>
+: <a class="el" href="group__config.html#ga16d5c79bfe022d49a9231400bd77b25e">workbench.h</a>
+</li>
+<li>config_get()
+: <a class="el" href="group__config.html#ga31ebc058eaf6753f3d9137bc3b17a80c">workbench.h</a>
 </li>
 <li>config_init()
-: <a class="el" href="workbench__config_8h.html#a092dcf94b7f8401790f6ede857121f2c">workbench_config.h</a>
+: <a class="el" href="group__config.html#ga092dcf94b7f8401790f6ede857121f2c">workbench.h</a>
+</li>
+<li>config_print()
+: <a class="el" href="group__config.html#ga69ec4a9cfe085a0ea03c5c17d2f3b3a3">workbench.h</a>
 </li>
 <li>CYN
 : <a class="el" href="workbench__logger_8h.html#a7e1434ea087a3703e7a81a89159663b4">workbench_logger.h</a>
@@ -133,52 +126,30 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>DEFAULT_IN_CHANNELS_COUNT
-: <a class="el" href="workbench__config_8h.html#a15b16a6ea7016cfee8514844b0b22915">workbench_config.h</a>
+: <a class="el" href="group__config.html#ga15b16a6ea7016cfee8514844b0b22915">workbench.h</a>
 </li>
 <li>DEFAULT_OUT_CHANNELS_COUNT
-: <a class="el" href="workbench__config_8h.html#a501db95d247f1f2361dd208a1c141d41">workbench_config.h</a>
-</li>
-<li>DEFAULT_SAMPLE_FORMAT
-: <a class="el" href="workbench__config_8h.html#a8dee1276b3ac404fe98eca636dd519fb">workbench_config.h</a>
-</li>
-<li>DEFINE
-: <a class="el" href="workbench__config_8h.html#a46929313f236a3c9e8472fd56d95b6e9">workbench_config.h</a>
-</li>
-<li>DEFINE_SETTERS
-: <a class="el" href="workbench__config_8h.html#a26b8f871020948293f39603982bb135d">workbench_config.h</a>
-</li>
-<li>DEFINE_STRUCT
-: <a class="el" href="workbench__config_8h.html#a3e24b6ea1a37ff08f1a07bd586fe527e">workbench_config.h</a>
-</li>
-</ul>
-
-
-<h3><a id="index_e"></a>- e -</h3><ul>
-<li>ENUMERATE
-: <a class="el" href="workbench__config_8h.html#afd4a54d71549af6633ae069ac7161e16">workbench_config.h</a>
+: <a class="el" href="group__config.html#ga501db95d247f1f2361dd208a1c141d41">workbench.h</a>
 </li>
 </ul>
 
 
 <h3><a id="index_f"></a>- f -</h3><ul>
 <li>flag_bits
-: <a class="el" href="workbench__config_8h.html#a49003697fc6edfb6ba50009545fe3f40">workbench_config.h</a>
+: <a class="el" href="group__config.html#ga49003697fc6edfb6ba50009545fe3f40">workbench.h</a>
 </li>
 <li>flags
-: <a class="el" href="workbench__config_8h.html#ab6b306ef981f5e21bb41ea2c2dbe8cd9">workbench_config.h</a>
+: <a class="el" href="group__config.html#gab6b306ef981f5e21bb41ea2c2dbe8cd9">workbench.h</a>
 </li>
 <li>FLAGS
-: <a class="el" href="workbench__config_8h.html#afbb888dc9b7a5266a291ded9b304a051">workbench_config.h</a>
+: <a class="el" href="group__config.html#gafbb888dc9b7a5266a291ded9b304a051">workbench.h</a>
 </li>
 </ul>
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
-<li>get_config()
-: <a class="el" href="workbench__config_8h.html#a5b69eea0d2efcc36a4586d33986cd808">workbench_config.h</a>
-</li>
 <li>get_log_level()
-: <a class="el" href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">workbench_config.h</a>
+: <a class="el" href="group__config.html#ga92db974a723bb3fc03d7c7d9d5c610f1">workbench.h</a>
 </li>
 <li>GRN
 : <a class="el" href="workbench__logger_8h.html#a0210fe4e6bc3347c831a58ffcad97db2">workbench_logger.h</a>
@@ -237,19 +208,13 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 : <a class="el" href="workbench__midi_8h.html#a64b08db61b463b1769d8f18fae1ea8e4">workbench_midi.h</a>
 </li>
 <li>midi_deinit()
-: <a class="el" href="workbench__midi_8h.html#a38b6a4a6ec42191fe62ab3b79826020d">workbench_midi.h</a>
-</li>
-<li>MIDI_ENABLED
-: <a class="el" href="workbench__config_8h.html#aebead925e76eda38d70e5bb9c2e31577">workbench_config.h</a>
+: <a class="el" href="group__midi.html#ga38b6a4a6ec42191fe62ab3b79826020d">workbench.h</a>
 </li>
 <li>MIDI_EOX
 : <a class="el" href="workbench__midi_8h.html#a140c8cfa4bbf1a03494abdbd639d49f2">workbench_midi.h</a>
 </li>
-<li>MIDI_IN_ENABLED
-: <a class="el" href="workbench__config_8h.html#a84aa0eedfd065bb08e646f943cd29441">workbench_config.h</a>
-</li>
 <li>midi_init()
-: <a class="el" href="workbench__midi_8h.html#a98b3c7c8e3e254ea1026ff3f781add0d">workbench_midi.h</a>
+: <a class="el" href="group__midi.html#ga98b3c7c8e3e254ea1026ff3f781add0d">workbench.h</a>
 </li>
 <li>MIDI_LOCAL
 : <a class="el" href="workbench__midi_8h.html#a9cbea4f197c6bef555ef260781834bc2">workbench_midi.h</a>
@@ -268,9 +233,6 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 </li>
 <li>MIDI_ON_NOTE
 : <a class="el" href="workbench__midi_8h.html#a84715565b6746f4859214d524b68e523">workbench_midi.h</a>
-</li>
-<li>MIDI_OUT_ENABLED
-: <a class="el" href="workbench__config_8h.html#ac859e1c0d3dd5b963f90a5d407f501da">workbench_config.h</a>
 </li>
 <li>MIDI_POLY_ON
 : <a class="el" href="workbench__midi_8h.html#ac748db303557f631cdfbe595a70c9350">workbench_midi.h</a>
@@ -312,7 +274,7 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 : <a class="el" href="workbench__midi_8h.html#aac3142724fa4e0f26fa1e000b4b349ed">workbench_midi.h</a>
 </li>
 <li>MidiCallback
-: <a class="el" href="workbench__midi_8h.html#ac3a6502ef7b764a0c4ac32264816910d">workbench_midi.h</a>
+: <a class="el" href="group__midi.html#gac3a6502ef7b764a0c4ac32264816910d">workbench.h</a>
 </li>
 </ul>
 
@@ -320,12 +282,6 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>PA_SAMPLE_FORMAT
 : <a class="el" href="workbench__audio_8h.html#a862fffa20ad836eabfcc90ee88523014">workbench_audio.h</a>
-</li>
-<li>parse_val()
-: <a class="el" href="workbench__config_8h.html#ab355d010cdfc1d9034810071f2113aa1">workbench_config.h</a>
-</li>
-<li>print_config()
-: <a class="el" href="workbench__config_8h.html#ac7c8d9e5c9b0a3e2904557cbd5d20c32">workbench_config.h</a>
 </li>
 <li>PRINT_FILE
 : <a class="el" href="workbench__logger_8h.html#a0870dcaeb0549d7f06f38ebe3e83e844">workbench_logger.h</a>
@@ -340,9 +296,6 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
-<li>read_config_from_file()
-: <a class="el" href="workbench__config_8h.html#a3000aa679873ca624e13dd2787c23717">workbench_config.h</a>
-</li>
 <li>RED
 : <a class="el" href="workbench__logger_8h.html#a27f5724b69dc6b891012559b0216c617">workbench_logger.h</a>
 </li>
@@ -355,6 +308,34 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 </li>
 <li>SAMPLE_FORMAT
 : <a class="el" href="workbench__audio_8h.html#a4a1dc76804dee55440195a35b866d570">workbench_audio.h</a>
+</li>
+</ul>
+
+
+<h3><a id="index_w"></a>- w -</h3><ul>
+<li>WORKBENCH_CONFIG_DEFINE_SETTERS
+: <a class="el" href="workbench__config_8h.html#a5fdab419658a1cb9855750cb1dd3b3ca">workbench_config.h</a>
+</li>
+<li>WORKBENCH_CONFIG_DEFINE_STRUCT
+: <a class="el" href="workbench__config_8h.html#a5d3fe9025a4e0da9175e186471a3021d">workbench_config.h</a>
+</li>
+<li>WORKBENCH_CONFIG_IMPLEMENT_SETTERS
+: <a class="el" href="workbench__config_8h.html#ae438ca6f2f81b6aa197afae092a26ccd">workbench_config.h</a>
+</li>
+<li>WORKBENCH_CONFIG_PARSE_ARGUMENTS
+: <a class="el" href="workbench__config_8h.html#a05447f16732c76b0a6106b83629d1873">workbench_config.h</a>
+</li>
+<li>WORKBENCH_CONFIG_PARSE_STRING
+: <a class="el" href="workbench__config_8h.html#af7d19e62c05bbbf74c044dc30429ca25">workbench_config.h</a>
+</li>
+<li>WORKBENCH_CONFIG_SET_DEFAULTS
+: <a class="el" href="workbench__config_8h.html#a32a1d700fdc85afd9fb6bd1752d4699e">workbench_config.h</a>
+</li>
+<li>WORKBENCH_FLAG_DEFINE
+: <a class="el" href="workbench__config_8h.html#ad657956d5b7bb3aa256f82803b82e98b">workbench_config.h</a>
+</li>
+<li>WORKBENCH_FLAG_ENUMERATE
+: <a class="el" href="workbench_8h.html#af8f2d0e1c0203aff7250d03465327467">workbench.h</a>
 </li>
 </ul>
 

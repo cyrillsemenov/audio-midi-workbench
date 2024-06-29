@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['default_5fin_5fchannels_5fcount_152',['DEFAULT_IN_CHANNELS_COUNT',['../workbench__config_8h.html#a15b16a6ea7016cfee8514844b0b22915',1,'workbench_config.h']]],
-  ['default_5fout_5fchannels_5fcount_153',['DEFAULT_OUT_CHANNELS_COUNT',['../workbench__config_8h.html#a501db95d247f1f2361dd208a1c141d41',1,'workbench_config.h']]],
-  ['default_5fsample_5fformat_154',['DEFAULT_SAMPLE_FORMAT',['../workbench__config_8h.html#a8dee1276b3ac404fe98eca636dd519fb',1,'workbench_config.h']]],
-  ['define_155',['DEFINE',['../workbench__config_8h.html#a46929313f236a3c9e8472fd56d95b6e9',1,'workbench_config.h']]],
-  ['define_5fsetters_156',['DEFINE_SETTERS',['../workbench__config_8h.html#a26b8f871020948293f39603982bb135d',1,'workbench_config.h']]],
-  ['define_5fstruct_157',['DEFINE_STRUCT',['../workbench__config_8h.html#a3e24b6ea1a37ff08f1a07bd586fe527e',1,'workbench_config.h']]]
+  ['log_5fd_147',['log_d',['../workbench__logger_8h.html#aeb7043b5b09ab4eff142cd7438586bca',1,'workbench_logger.h']]],
+  ['log_5fe_148',['log_e',['../workbench__logger_8h.html#a0954e1daed61784cd8ded702e5cf21e1',1,'workbench_logger.h']]],
+  ['log_5fformat_149',['log_format',['../workbench__logger_8h.html#a08b73cf4cf124b0041ddc8df96fec115',1,'workbench_logger.h']]],
+  ['log_5fi_150',['log_i',['../workbench__logger_8h.html#a6b31466d2e9b5a39883f1c4271b9779d',1,'workbench_logger.h']]],
+  ['log_5flevel_151',['LOG_LEVEL',['../workbench__logger_8h.html#a0b87e0d3bf5853bcbb0b66a7c48fdc05',1,'workbench_logger.h']]],
+  ['log_5fw_152',['log_w',['../workbench__logger_8h.html#a135ae456bdb29a6552b6fde22a6998e2',1,'workbench_logger.h']]]
 ];

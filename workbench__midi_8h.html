@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -86,38 +85,21 @@ $(document).ready(function(){initNavTree('workbench__midi_8h.html',''); initResi
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">workbench_midi.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>MIDI system initialization, deinitialization, and processing for Workbench applications.  
+<p>MIDI message constants for Workbench applications.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;portmidi.h&quot;</code><br />
-<code>#include &quot;porttime.h&quot;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for workbench_midi.h:</div>
-<div class="dyncontent">
-<div class="center"><img src="workbench__midi_8h__incl.png" border="0" usemap="#ainclude_2workbench__midi_8h" alt=""/></div>
-<map name="ainclude_2workbench__midi_8h" id="ainclude_2workbench__midi_8h">
-<area shape="rect" title="MIDI system initialization, deinitialization, and processing for Workbench applications." alt="" coords="69,5,261,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,95,107"/>
-<area shape="rect" title=" " alt="" coords="119,80,210,107"/>
-<area shape="rect" title=" " alt="" coords="235,80,305,107"/>
-</map>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="workbench__midi_8h__dep__incl.png" border="0" usemap="#ainclude_2workbench__midi_8hdep" alt=""/></div>
 <map name="ainclude_2workbench__midi_8hdep" id="ainclude_2workbench__midi_8hdep">
-<area shape="rect" title="MIDI system initialization, deinitialization, and processing for Workbench applications." alt="" coords="5,5,197,32"/>
-<area shape="rect" href="workbench_8h_source.html" title=" " alt="" coords="23,155,179,181"/>
-<area shape="rect" href="workbench__config_8h.html" title="Configuration settings and utility functions for Workbench audio and MIDI applications." alt="" coords="69,80,272,107"/>
+<area shape="rect" title="MIDI message constants for Workbench applications." alt="" coords="5,5,197,32"/>
+<area shape="rect" href="workbench_8h.html" title=" " alt="" coords="23,80,179,107"/>
 </map>
 </div>
 </div>
@@ -241,120 +223,11 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__midi_8h.html#ac748db303557f631cdfbe595a70c9350">MIDI_POLY_ON</a>&#160;&#160;&#160;0x7f</td></tr>
 <tr class="memdesc:ac748db303557f631cdfbe595a70c9350"><td class="mdescLeft">&#160;</td><td class="mdescRight">MIDI Poly Mode On message. <br /></td></tr>
 <tr class="separator:ac748db303557f631cdfbe595a70c9350"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:ac3a6502ef7b764a0c4ac32264816910d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__midi_8h.html#ac3a6502ef7b764a0c4ac32264816910d">MidiCallback</a>) (const void *, void *, unsigned long, void *)</td></tr>
-<tr class="memdesc:ac3a6502ef7b764a0c4ac32264816910d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type definition for MIDI callback functions.  <a href="workbench__midi_8h.html#ac3a6502ef7b764a0c4ac32264816910d">More...</a><br /></td></tr>
-<tr class="separator:ac3a6502ef7b764a0c4ac32264816910d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a98b3c7c8e3e254ea1026ff3f781add0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__midi_8h.html#a98b3c7c8e3e254ea1026ff3f781add0d">midi_init</a> ()</td></tr>
-<tr class="memdesc:a98b3c7c8e3e254ea1026ff3f781add0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the MIDI system.  <a href="workbench__midi_8h.html#a98b3c7c8e3e254ea1026ff3f781add0d">More...</a><br /></td></tr>
-<tr class="separator:a98b3c7c8e3e254ea1026ff3f781add0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b6a4a6ec42191fe62ab3b79826020d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="workbench__midi_8h.html#a38b6a4a6ec42191fe62ab3b79826020d">midi_deinit</a> ()</td></tr>
-<tr class="memdesc:a38b6a4a6ec42191fe62ab3b79826020d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deinitializes the MIDI system.  <a href="workbench__midi_8h.html#a38b6a4a6ec42191fe62ab3b79826020d">More...</a><br /></td></tr>
-<tr class="separator:a38b6a4a6ec42191fe62ab3b79826020d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>MIDI system initialization, deinitialization, and processing for Workbench applications. </p>
-<p>This header file defines functions and macros for managing MIDI input and output using the PortMidi library. It includes type definitions for MIDI callback functions and a comprehensive set of MIDI message constants.</p>
-<p>The <code>midi_init</code> function sets up the MIDI input and output streams, while the <code>midi_deinit</code> function closes the streams and terminates the MIDI system. The <code>__midi_callback</code> function processes incoming MIDI messages, and the <code>process_midi</code> function handles MIDI message parsing and logging.</p>
-<p>Example usage: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="workbench__midi_8h.html">workbench_midi.h</a>&quot;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">void</span> my_midi_callback(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer, <span class="keywordtype">unsigned</span></div>
-<div class="line"><span class="keywordtype">long</span> block_size, <span class="keywordtype">void</span> *user_data) {</div>
-<div class="line">    <span class="comment">// Process MIDI data here</span></div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> main() {</div>
-<div class="line">    <a class="code" href="workbench__midi_8h.html#a98b3c7c8e3e254ea1026ff3f781add0d">midi_init</a>();</div>
-<div class="line">    <span class="comment">// Application code here</span></div>
-<div class="line">    <a class="code" href="workbench__midi_8h.html#a38b6a4a6ec42191fe62ab3b79826020d">midi_deinit</a>();</div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="ttc" id="aworkbench__midi_8h_html"><div class="ttname"><a href="workbench__midi_8h.html">workbench_midi.h</a></div><div class="ttdoc">MIDI system initialization, deinitialization, and processing for Workbench applications.</div></div>
-<div class="ttc" id="aworkbench__midi_8h_html_a38b6a4a6ec42191fe62ab3b79826020d"><div class="ttname"><a href="workbench__midi_8h.html#a38b6a4a6ec42191fe62ab3b79826020d">midi_deinit</a></div><div class="ttdeci">void midi_deinit()</div><div class="ttdoc">Deinitializes the MIDI system.</div><div class="ttdef"><b>Definition:</b> workbench_midi.c:94</div></div>
-<div class="ttc" id="aworkbench__midi_8h_html_a98b3c7c8e3e254ea1026ff3f781add0d"><div class="ttname"><a href="workbench__midi_8h.html#a98b3c7c8e3e254ea1026ff3f781add0d">midi_init</a></div><div class="ttdeci">void midi_init()</div><div class="ttdoc">Initializes the MIDI system.</div><div class="ttdef"><b>Definition:</b> workbench_midi.c:49</div></div>
-</div><!-- fragment --> </div><h2 class="groupheader">Typedef Documentation</h2>
-<a id="ac3a6502ef7b764a0c4ac32264816910d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3a6502ef7b764a0c4ac32264816910d">&#9670;&nbsp;</a></span>MidiCallback</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef int(* MidiCallback) (const void *, void *, unsigned long, void *)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Type definition for MIDI callback functions. </p>
-<p>A <code>MidiCallback</code> function is called to handle incoming and outgoing MIDI messages. It takes the following parameters:</p><ul>
-<li><code>input_buffer</code>: A pointer to the input MIDI buffer.</li>
-<li><code>output_buffer</code>: A pointer to the output MIDI buffer.</li>
-<li><code>block_size</code>: The number of MIDI events in the buffer.</li>
-<li><code>user_data</code>: A pointer to user-defined data passed to the callback function.</li>
-</ul>
-<p>Example usage: </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> my_midi_callback(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer, <span class="keywordtype">unsigned</span></div>
-<div class="line"><span class="keywordtype">long</span> block_size, <span class="keywordtype">void</span> *user_data) {</div>
-<div class="line">  <span class="keyword">const</span> PmEvent *in_buffer = (<span class="keyword">const</span> PmEvent*)in;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> i = 0; i &lt; length; ++i) {</div>
-<div class="line">    PmEvent <span class="keyword">event</span> = in_buffer[i];</div>
-<div class="line">    PmMessage message = <span class="keyword">event</span>.message;</div>
-<div class="line">    <a class="code" href="workbench__logger_8h.html#a6b31466d2e9b5a39883f1c4271b9779d">log_i</a>(<span class="stringliteral">&quot;%i&quot;</span>, message);</div>
-<div class="line">  }</div>
-<div class="line">  <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="ttc" id="aworkbench__logger_8h_html_a6b31466d2e9b5a39883f1c4271b9779d"><div class="ttname"><a href="workbench__logger_8h.html#a6b31466d2e9b5a39883f1c4271b9779d">log_i</a></div><div class="ttdeci">#define log_i(message,...)</div><div class="ttdoc">Logs an info message.</div><div class="ttdef"><b>Definition:</b> workbench_logger.h:135</div></div>
-</div><!-- fragment --> 
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a38b6a4a6ec42191fe62ab3b79826020d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38b6a4a6ec42191fe62ab3b79826020d">&#9670;&nbsp;</a></span>midi_deinit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void midi_deinit </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Deinitializes the MIDI system. </p>
-<p>This function stops the MIDI system, frees allocated buffers, and terminates the PortMidi library. It logs any errors that occur during the deinitialization process. </p>
-
-</div>
-</div>
-<a id="a98b3c7c8e3e254ea1026ff3f781add0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98b3c7c8e3e254ea1026ff3f781add0d">&#9670;&nbsp;</a></span>midi_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void midi_init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes the MIDI system. </p>
-<p>This function initializes the PortMidi library, sets up the MIDI input and output devices based on the configuration settings, and allocates buffers for MIDI events. It also starts the MIDI input and output streams if they are enabled in the configuration.</p>
-<p>If an error occurs during initialization, it logs the error message and deinitializes the MIDI system. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p>MIDI message constants for Workbench applications. </p>
+<p>This header file defines a comprehensive set of MIDI message constants for managing MIDI input and output in Workbench applications. It includes type definitions and macros for various MIDI message types and control change messages. </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

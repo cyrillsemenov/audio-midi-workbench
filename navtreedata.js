@@ -36,6 +36,7 @@ var NAVTREE =
       [ "Config File", "index.html#autotoc_md8", null ],
       [ "Command Line Arguments", "index.html#autotoc_md9", null ]
     ] ],
+    [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

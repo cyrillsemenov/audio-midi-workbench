@@ -1,4 +1,4 @@
 <map id="include/workbench_config.h" name="include/workbench_config.h">
-<area shape="rect" id="node1" title="Configuration settings and utility functions for Workbench audio and MIDI applications." alt="" coords="5,5,208,32"/>
-<area shape="rect" id="node2" href="$workbench_8h_source.html" title=" " alt="" coords="29,80,185,107"/>
+<area shape="rect" id="node1" title="Configuration settings and macros for Workbench audio and MIDI applications." alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node2" href="$workbench_8h.html" title=" " alt="" coords="29,80,185,107"/>
 </map>

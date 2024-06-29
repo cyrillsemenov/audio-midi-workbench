@@ -1,5 +1,4 @@
 <map id="include/workbench_midi.h" name="include/workbench_midi.h">
-<area shape="rect" id="node1" title="MIDI system initialization, deinitialization, and processing for Workbench applications." alt="" coords="5,5,197,32"/>
-<area shape="rect" id="node2" href="$workbench_8h_source.html" title=" " alt="" coords="23,155,179,181"/>
-<area shape="rect" id="node3" href="$workbench__config_8h.html" title="Configuration settings and utility functions for Workbench audio and MIDI applications." alt="" coords="69,80,272,107"/>
+<area shape="rect" id="node1" title="MIDI message constants for Workbench applications." alt="" coords="5,5,197,32"/>
+<area shape="rect" id="node2" href="$workbench_8h.html" title=" " alt="" coords="23,80,179,107"/>
 </map>

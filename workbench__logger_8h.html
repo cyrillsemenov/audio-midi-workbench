@@ -30,7 +30,6 @@
    <div id="projectname">Workbench Library
    &#160;<span id="projectnumber">0.1b</span>
    </div>
-   <div id="projectbrief">The Workbench library provides a cookie-cutter for audio and MIDI processing using PortAudio and PortMidi.</div>
   </td>
  </tr>
  </tbody>
@@ -114,7 +113,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="center"><img src="workbench__logger_8h__dep__incl.png" border="0" usemap="#ainclude_2workbench__logger_8hdep" alt=""/></div>
 <map name="ainclude_2workbench__logger_8hdep" id="ainclude_2workbench__logger_8hdep">
 <area shape="rect" title="A logging utility for C programs with configurable verbosity levels and optional context information." alt="" coords="5,5,208,32"/>
-<area shape="rect" href="workbench_8h_source.html" title=" " alt="" coords="29,80,185,107"/>
+<area shape="rect" href="workbench_8h.html" title=" " alt="" coords="29,80,185,107"/>
 </map>
 </div>
 </div>
@@ -293,9 +292,9 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 3)                                                     \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="group__config.html#ga92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 3)                                                     \</div>
 <div class="line">    log_format(__stdoutp, <a class="code" href="workbench__logger_8h.html#a7e1434ea087a3703e7a81a89159663b4">CYN</a>(<span class="stringliteral">&quot;dbg&quot;</span>), message __VA_OPT__(, ) __VA_ARGS__);</div>
-<div class="ttc" id="aworkbench__config_8h_html_a92db974a723bb3fc03d7c7d9d5c610f1"><div class="ttname"><a href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a></div><div class="ttdeci">uint8_t get_log_level()</div><div class="ttdoc">Retrieves the log level.</div><div class="ttdef"><b>Definition:</b> workbench_config.c:26</div></div>
+<div class="ttc" id="agroup__config_html_ga92db974a723bb3fc03d7c7d9d5c610f1"><div class="ttname"><a href="group__config.html#ga92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a></div><div class="ttdeci">uint8_t get_log_level()</div><div class="ttdoc">Retrieves the log level.</div><div class="ttdef"><b>Definition:</b> workbench_config.c:34</div></div>
 <div class="ttc" id="aworkbench__logger_8h_html_a7e1434ea087a3703e7a81a89159663b4"><div class="ttname"><a href="workbench__logger_8h.html#a7e1434ea087a3703e7a81a89159663b4">CYN</a></div><div class="ttdeci">#define CYN(text)</div><div class="ttdoc">Colors the text cyan.</div><div class="ttdef"><b>Definition:</b> workbench_logger.h:117</div></div>
 </div><!-- fragment -->
 <p>Logs a debug message. </p>
@@ -327,7 +326,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 0)                                                     \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="group__config.html#ga92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 0)                                                     \</div>
 <div class="line">    log_format(__stderrp, <a class="code" href="workbench__logger_8h.html#a27f5724b69dc6b891012559b0216c617">RED</a>(<span class="stringliteral">&quot;err&quot;</span>), <a class="code" href="workbench__logger_8h.html#a27f5724b69dc6b891012559b0216c617">RED</a>(message) __VA_OPT__(, ) __VA_ARGS__);</div>
 <div class="ttc" id="aworkbench__logger_8h_html_a27f5724b69dc6b891012559b0216c617"><div class="ttname"><a href="workbench__logger_8h.html#a27f5724b69dc6b891012559b0216c617">RED</a></div><div class="ttdeci">#define RED(text)</div><div class="ttdoc">Colors the text red.</div><div class="ttdef"><b>Definition:</b> workbench_logger.h:113</div></div>
 </div><!-- fragment -->
@@ -418,7 +417,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 2)                                                     \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="group__config.html#ga92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 2)                                                     \</div>
 <div class="line">    log_format(__stdoutp, <a class="code" href="workbench__logger_8h.html#a0210fe4e6bc3347c831a58ffcad97db2">GRN</a>(<span class="stringliteral">&quot;inf&quot;</span>), message __VA_OPT__(, ) __VA_ARGS__);</div>
 <div class="ttc" id="aworkbench__logger_8h_html_a0210fe4e6bc3347c831a58ffcad97db2"><div class="ttname"><a href="workbench__logger_8h.html#a0210fe4e6bc3347c831a58ffcad97db2">GRN</a></div><div class="ttdeci">#define GRN(text)</div><div class="ttdoc">Colors the text green.</div><div class="ttdef"><b>Definition:</b> workbench_logger.h:114</div></div>
 </div><!-- fragment -->
@@ -474,7 +473,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="workbench__config_8h.html#a92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 1)                                                     \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code" href="group__config.html#ga92db974a723bb3fc03d7c7d9d5c610f1">get_log_level</a>() &gt; 1)                                                     \</div>
 <div class="line">    log_format(__stderrp, <a class="code" href="workbench__logger_8h.html#ae28d39dab59b8be360c32318cfda26ff">YLW</a>(<span class="stringliteral">&quot;wrn&quot;</span>), <a class="code" href="workbench__logger_8h.html#ae28d39dab59b8be360c32318cfda26ff">YLW</a>(message) __VA_OPT__(, ) __VA_ARGS__);</div>
 <div class="ttc" id="aworkbench__logger_8h_html_ae28d39dab59b8be360c32318cfda26ff"><div class="ttname"><a href="workbench__logger_8h.html#ae28d39dab59b8be360c32318cfda26ff">YLW</a></div><div class="ttdeci">#define YLW(text)</div><div class="ttdoc">Colors the text yellow.</div><div class="ttdef"><b>Definition:</b> workbench_logger.h:115</div></div>
 </div><!-- fragment -->
