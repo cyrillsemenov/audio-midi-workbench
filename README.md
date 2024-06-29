@@ -78,7 +78,7 @@ void my_audio_callback(const void *input_buffer, void *output_buffer, unsigned l
 }
 
 int main(int argc, char **argv) {
-  cfg = config_init(&my_audio_callback, NULL, NULL);
+  cfg = config_init(argc, argv, &my_audio_callback, NULL, NULL);
   while (true) {
     Pa_Sleep(1000);
   }
@@ -104,7 +104,7 @@ int my_midi_callback(const void *input_buffer, void *output_buffer, unsigned lon
 }
 
 int main(int argc, char **argv) {
-  cfg = config_init(&my_audio_callback, NULL, NULL);
+  cfg = config_init(argc, argv, &my_audio_callback, NULL, NULL);
   while (true) {
     // Use porttime sleep function instead of portaudio
     Pt_Sleep(1000);
