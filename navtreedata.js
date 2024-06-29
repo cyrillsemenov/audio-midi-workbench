@@ -30,8 +30,11 @@ var NAVTREE =
     [ "Installation", "index.html#autotoc_md3", null ],
     [ "Usage", "index.html#autotoc_md4", [
       [ "Audio", "index.html#autotoc_md5", null ],
-      [ "MIDI", "index.html#autotoc_md6", null ],
-      [ "Configuration", "index.html#autotoc_md7", null ]
+      [ "MIDI", "index.html#autotoc_md6", null ]
+    ] ],
+    [ "Configuration", "index.html#autotoc_md7", [
+      [ "Config File", "index.html#autotoc_md8", null ],
+      [ "Command Line Arguments", "index.html#autotoc_md9", null ]
     ] ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],

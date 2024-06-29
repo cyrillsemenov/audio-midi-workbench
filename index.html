@@ -140,9 +140,6 @@ Usage</h1>
 Audio</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;workbench.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// Disable midi</span></div>
-<div class="line"><span class="preprocessor">#define MIDI_ENABLED 0</span></div>
-<div class="line"> </div>
 <div class="line"><a class="code" href="structConfig.html">Config</a> *cfg;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> my_audio_callback(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> block_size, <span class="keywordtype">void</span> *user_data) {</div>
@@ -166,9 +163,6 @@ Audio</h2>
 MIDI</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;workbench.h&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="comment">// Disable audio</span></div>
-<div class="line"><span class="preprocessor">#define AUDIO_ENABLED 0</span></div>
-<div class="line"> </div>
 <div class="line"><a class="code" href="structConfig.html">Config</a> *cfg;</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> my_midi_callback(<span class="keyword">const</span> <span class="keywordtype">void</span> *input_buffer, <span class="keywordtype">void</span> *output_buffer, <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> block_size, <span class="keywordtype">void</span> *user_data) {</div>
@@ -189,15 +183,35 @@ MIDI</h2>
 <div class="line">  }</div>
 <div class="line">  <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
-Configuration</h2>
-<p>The project includes a flexible configuration system using X-macros to manage various settings.</p>
-<p>The <code><a class="el" href="structConfig.html" title="Defines the structure for configuration settings.">Config</a></code> structure holds all configuration parameters, and the following macros are used to define and manage these settings:</p>
-<ul>
-<li><code>CONFIG</code>: Defines configuration fields and their default values.</li>
-<li><code>FLAGS</code>: Lists feature flags for enabling or disabling various functionalities.</li>
-<li><code>ENUMERATE</code> and <code>DEFINE</code>: Used to generate enumerations and bitwise values for feature flags. </li>
-</ul>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md7"></a>
+Configuration</h1>
+<p>Workbench parameters have default values, which can be overridden by values set in a config file or command line arguments.</p>
+<p>Values have this priority:</p>
+<ol type="1">
+<li>Default parameters</li>
+<li>Values from the config file override default values</li>
+<li>Values from command line arguments override values from the config file</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Config File</h2>
+<p>Create a text file (e.g., config.yml) that contains the configuration settings.</p>
+<p>Example config.yml:</p>
+<div class="fragment"><div class="line"># Configuration for the application</div>
+<div class="line">midi_input: my_midi_input_device</div>
+<div class="line">midi_output: my_midi_output_device</div>
+<div class="line">midi_buffer_size: 512</div>
+<div class="line">audio_input: my_audio_input_device</div>
+<div class="line">audio_output: my_audio_output_device</div>
+<div class="line">sample_rate: 44100</div>
+<div class="line">block_size: 1024</div>
+<div class="line">in_channel_count: 1</div>
+<div class="line">out_channel_count: 2</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
+Command Line Arguments</h2>
+<p>When running the application, you can pass command line arguments to override the config file settings or to provide additional options.</p>
+<p>Example command line:</p>
+<div class="fragment"><div class="line">./my_application --config=config.txt --midi_input=my_midi_input_device --sample_rate=48000</div>
+</div><!-- fragment --><p>This will use the config.txt file for initial settings but will override the midi_input and sample_rate settings from the command line arguments. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
