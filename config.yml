@@ -1,0 +1,8 @@
+# Comments allowed
+midi_input: APC MINI
+midi_output: IAC Driver Bus 1
+midi_output_latecncy: 0
+strange_field: 0
+sample_rate: 44100
+block_size: 512
+log_level: 4

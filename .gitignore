@@ -1,0 +1,7 @@
+build
+bin
+debug
+obj
+.cache
+.DS_Store
+compile_commands.json

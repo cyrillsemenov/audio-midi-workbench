@@ -1,0 +1,36 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "make all",
+      "type": "shell",
+      "command": "make all",
+      "icon": { "id": "file-text", "color": "terminal.ansiGreen" },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "make clean",
+      "type": "shell",
+      "command": "make clean",
+      "icon": { "id": "trash", "color": "terminal.ansiRed" },
+      "problemMatcher": [],
+      "group": "none"
+    },
+    {
+      "label": "compiledb",
+      "type": "shell",
+      "command": "compiledb make",
+      "icon": { "id": "database", "color": "terminal.ansiCyan" },
+      "problemMatcher": [],
+      "group": "none",
+      "dependsOn": ["make clean"],
+      "dependsOrder": "sequence"
+    }
+  ]
+}
