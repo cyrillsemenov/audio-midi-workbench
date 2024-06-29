@@ -153,3 +153,7 @@ Example command line:
 ```
 
 This will use the config.txt file for initial settings but will override the midi_input and sample_rate settings from the command line arguments.
+
+#### Support me
+
+[Patreon](https://www.patreon.com/a_f_a_b)
